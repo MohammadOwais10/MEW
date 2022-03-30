@@ -14,7 +14,9 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 
 //Get All Products
 exports.getAllProducts = catchAsyncError(async (req, res) => {
-  const apiFeature = new APiFeatures(Product.find(), req.query).search();
+  const apiFeature = new APiFeatures(Product.find(), req.query)
+    .search()
+    .filter();
 
   // const products = await Product.find(); --> both line code work same but "Product.find()" use too much then we pass the querry
   const products = await apiFeature.query;
