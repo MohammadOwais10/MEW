@@ -34,6 +34,14 @@ class APiFeatures {
     // console.log(querystr);
     return this;
   }
+
+  //Pagination for per page item show
+  pagination(resultPerPage) {
+    const currentPage = Number(this.querystr.page) || 1;
+    const skip = resultPerPage * (currentPage - 1);
+    this.query = this.query.limit(resultPerPage).skip(skip);
+    return this;
+  }
 }
 
 module.exports = APiFeatures;
