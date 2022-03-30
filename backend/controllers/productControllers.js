@@ -1,6 +1,7 @@
 const Product = require("../models/productModel");
 const ErrorHandler = require("../utils/errorhandler");
 const catchAsyncError = require("../middleware/catchAsyncError");
+const APiFeatures = require("../utils/apiFeatures");
 
 //Create Product
 exports.createProduct = catchAsyncError(async (req, res, next) => {
@@ -13,7 +14,10 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 
 //Get All Products
 exports.getAllProducts = catchAsyncError(async (req, res) => {
-  const products = await Product.find();
+  const apiFeature = new APiFeatures(Product.find(), req.query).search();
+
+  // const products = await Product.find(); --> both line code work same but "Product.find()" use too much then we pass the querry
+  const products = await apiFeature.query;
   res.status(200).json({
     success: true,
     products,
