@@ -16,3 +16,18 @@ exports.isAuthenticatedUser = catchAsyncError(async (req, res, next) => {
 
   next();
 });
+
+//Authorize only Admin--> this code for Here we use for admin access only section, where admin are not then other user can not access these sections and features
+exports.authorizeRoles = (...roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new ErrorHandler(
+          `Role:${req.user.role} is not allowed to access this resource`,
+          403
+        )
+      );
+    }
+    next();
+  };
+};
