@@ -57,6 +57,14 @@ const productSchema = mongoose.Schema({
       },
     },
   ],
+
+  //--> code here use for give who make this product it giv user type
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: true,
+  }, //end
+
   createdAt: {
     type: Date,
     default: Date.now,
