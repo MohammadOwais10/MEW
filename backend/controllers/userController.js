@@ -183,3 +183,19 @@ exports.getAllUser = catchAsyncError(async (req, res, next) => {
     users,
   });
 });
+
+//Get Single User Details (Access by Admin only)
+exports.getSingleUser = catchAsyncError(async (req, res, next) => {
+  const user = await User.findById(req.params.id);
+
+  if (!user) {
+    return next(
+      new ErrorHandler(`User does not exist with id: ${req.prams.id}`)
+    );
+  }
+
+  res.status(200).json({
+    success: true,
+    user,
+  });
+});
