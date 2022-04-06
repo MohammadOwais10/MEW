@@ -49,3 +49,13 @@ exports.getSingleOrder = catchAsyncError(async (req, res, next) => {
     order,
   });
 });
+
+//Get Orders Details or My Order Details(Access by Only Login User)
+exports.myOrders = catchAsyncError(async (req, res, next) => {
+  const orders = await Order.find({ user: req.user._id });
+
+  res.status(200).json({
+    success: true,
+    orders,
+  });
+});
