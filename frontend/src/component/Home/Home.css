@@ -69,3 +69,61 @@
   justify-content: center;
   max-width: 100%;
 }
+
+.productCard {
+  width: 14vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+}
+
+.productCard > img {
+  width: 14vmax;
+}
+
+.productCard > div {
+  margin-top: -0.8vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.productCardSpan {
+  margin: 0px;
+  font: 1vmax "Roboto";
+  font-weight: 300;
+}
+
+.productCard > p {
+  font-family: "Roboto";
+  font-size: 1.5vmax;
+  font-weight: bold;
+  margin: 0.5vmax 0.5vmax;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.productCard > span {
+  margin: 0.5vmax;
+  color: green;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5vmax;
+  text-align: center;
+}
+
+.productCard:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+
+  transform: translateY(-1vmax);
+}
+
+@media screen and (max-width: 600px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+}
