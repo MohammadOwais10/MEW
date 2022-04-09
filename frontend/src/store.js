@@ -6,12 +6,12 @@ import { productReducer } from "./reducers/productReducer";
 const reducer = combineReducers({
   products: productReducer,
 });
-let initalState = {};
+let initialState = {};
 const middleware = [thunk];
 
 const store = createStore(
   reducer,
-  initalState,
+  initialState,
   composeWithDevTools(applyMiddleware(...middleware))
 );
 
