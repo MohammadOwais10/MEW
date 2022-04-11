@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -14,6 +16,7 @@
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
+    "react-material-ui-carousel": "^2.3.11",
     "react-rating-stars-component": "^2.2.0",
     "react-redux": "^7.2.8",
     "react-router-dom": "^6.3.0",
