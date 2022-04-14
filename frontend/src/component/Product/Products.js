@@ -1,13 +1,14 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./Products.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getProduct } from "../../actions/productAction";
+import { clearErrors, getProduct } from "../../actions/productAction";
 import Loader from "../layout/Loader/Loader";
 import ProductCard from "../Home/ProductCard";
 import { useParams } from "react-router-dom";
 import Pagination from "react-js-pagination";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
+import { useAlert } from "react-alert";
 
 const categories = [
   "Laptop",
@@ -23,14 +24,20 @@ const categories = [
 const Products = () => {
   const { Keyword } = useParams();
   const dispatch = useDispatch();
-
+  const alert = useAlert();
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([0, 200000]);
   const [category, setCategory] = useState("");
   const [ratings, setRatings] = useState(0);
 
-  const { products, loading, productCount, resultPerPage, filterProductCount } =
-    useSelector((state) => state.products);
+  const {
+    products,
+    loading,
+    productCount,
+    resultPerPage,
+    filterProductCount,
+    error,
+  } = useSelector((state) => state.products);
 
   const setCurrentPageNo = (e) => {
     setCurrentPage(e);
@@ -43,8 +50,12 @@ const Products = () => {
   let count = filterProductCount;
 
   useEffect(() => {
+    if (error) {
+      alert.error(error);
+      dispatch(clearErrors());
+    }
     dispatch(getProduct(Keyword, currentPage, price, category, ratings));
-  }, [dispatch, Keyword, currentPage, price, category, ratings]);
+  }, [dispatch, Keyword, currentPage, price, category, ratings, alert, error]);
 
   return (
     <Fragment>
