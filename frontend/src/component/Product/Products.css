@@ -14,6 +14,7 @@
   padding: 0 5vmax;
   justify-content: center;
   min-height: 30vh;
+  margin-left: 5vmax;
 }
 
 .paginationBox {
@@ -68,9 +69,11 @@
 
 .filterBox {
   width: 10vmax;
-  position: absolute;
+  position: fixed;
   top: 10vmax;
   left: 4vmax;
+  border: 2px solid rgb(105, 105, 105);
+  padding: 10px;
 }
 
 .categoryBox {
@@ -80,7 +83,7 @@
 .category-link {
   list-style: none;
   color: rgba(0, 0, 0, 0.61);
-  font: 400 0.8vmax "Roboto";
+  font: 400 1vmax "Roboto";
   margin: 0.4vmax;
   cursor: pointer;
   transition: all 0.5s;
@@ -90,7 +93,9 @@
 }
 
 .filterBox > fieldset {
-  border: 1px solid rgba(0, 0, 0, 0.329);
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
