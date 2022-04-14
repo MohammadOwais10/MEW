@@ -16,9 +16,8 @@ const Products = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [price, setPrice] = useState([0, 200000]);
 
-  const { products, loading, productCount, resultPerPage } = useSelector(
-    (state) => state.products
-  );
+  const { products, loading, productCount, resultPerPage, filterProductCount } =
+    useSelector((state) => state.products);
 
   const setCurrentPageNo = (e) => {
     setCurrentPage(e);
@@ -27,6 +26,8 @@ const Products = () => {
   const priceHandler = (event, newPrice) => {
     setPrice(newPrice);
   };
+
+  let count = filterProductCount;
 
   useEffect(() => {
     dispatch(getProduct(Keyword, currentPage, price));
@@ -59,7 +60,7 @@ const Products = () => {
             />
           </div>
 
-          {resultPerPage < productCount && (
+          {resultPerPage < count && (
             <div>
               <Pagination
                 activePage={currentPage}

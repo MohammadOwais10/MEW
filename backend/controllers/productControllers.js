@@ -21,16 +21,21 @@ exports.getAllProducts = catchAsyncError(async (req, res) => {
 
   const apiFeature = new APiFeatures(Product.find(), req.query)
     .search()
-    .filter()
-    .pagination(resultPerPage);
+    .filter();
+
+  let products = await apiFeature.query;
+  let filterProductCount = products.length;
+
+  apiFeature.pagination(resultPerPage);
 
   // const products = await Product.find(); --> both line code work same but "Product.find()" use too much then we pass the querry
-  const products = await apiFeature.query;
+  products = await apiFeature.query.clone();
   res.status(200).json({
     success: true,
     products,
     productCount,
     resultPerPage,
+    filterProductCount,
   });
 });
 

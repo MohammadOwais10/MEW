@@ -72,3 +72,15 @@
   top: 10vmax;
   left: 4vmax;
 }
+
+@media screen and (max-width: 600px) {
+  .filterBox {
+    width: 20vmax;
+    position: static;
+    margin: auto;
+  }
+
+  .page-link {
+    font: 300 1.7vmax "Roboto";
+  }
+}
