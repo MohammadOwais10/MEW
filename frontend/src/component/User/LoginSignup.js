@@ -6,7 +6,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import PersonIcon from "@material-ui/icons/Person";
 import Profile from "../../images/Profile3.png";
 import { useDispatch, useSelector } from "react-redux";
-import { clearErrors, login } from "../../actions/userAction";
+import { clearErrors, login, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import Loader from "../layout/Loader/Loader";
@@ -72,7 +72,7 @@ const LoginSignup = () => {
     myForm.set("email", email);
     myForm.set("password", password);
     myForm.set("avatar", avatar);
-    console.log("Signup From Submitted");
+    dispatch(register(myForm));
   };
 
   const registerDataChange = (e) => {
