@@ -38,7 +38,10 @@ function App() {
         <Route path="/products/:keyword" element={<Products />} />
         <Route path="/search" element={<Search />} />
         <Route path="/login" element={<LoginSignup />} />
-        <Route path="/account" element={<Profile />} />
+        <Route
+          path="/account"
+          element={isAuthenticated ? <Profile /> : <LoginSignup />}
+        />
       </Routes>
       <Footer />
     </Router>
