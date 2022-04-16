@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Loader from "../layout/Loader/Loader";
 import { Link } from "react-router-dom";
+import "./Profile.css";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -21,12 +22,12 @@ const Profile = () => {
       ) : (
         <Fragment>
           <div className="profileContainer">
-            <div>
+            <div className="profileEdit">
               <h1>My Profile</h1>
               <img src={user.avatar.url} alt={user.name} />
               <Link to="/me/update">Edit Profile</Link>
             </div>
-            <div>
+            <div className="profileDeatils">
               <div>
                 <h4>Full Name</h4>
                 <p>{user.name}</p>

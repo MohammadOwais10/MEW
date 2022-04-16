@@ -1,0 +1,163 @@
+.profileContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  max-width: 100%;
+  background-color: white;
+}
+
+.profileContainer .profileEdit {
+  display: flex;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8b500;
+  margin: 2vmax 0 2vmax 2vmax;
+  border-radius: 10px 0px 0px 10px;
+}
+.profileContainer .profileDeatils {
+  display: flex;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: #e2e2e2; */
+  background: #bdc3c7;
+  margin: 2vmax 2vmax 2vmax 0;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.profileContainer > div:first-child > h1 {
+  color: black;
+  font: 500 3vmax "Roboto";
+  transform: translateX(-10vmax) translateY(-2vmax);
+  margin-left: 18.5vmax;
+}
+
+.profileContainer > div:first-child > img {
+  width: 22vmax;
+  height: 22vmax;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+
+.profileContainer > div:first-child > img:hover {
+  transform: scale(1.05);
+}
+
+.profileContainer > div:first-child > a {
+  background: #fc4a1a;
+  font: 500 1.8vmax "Roboto";
+  color: white;
+  text-decoration: none;
+  padding: 0.8vmax;
+  width: 35%;
+  margin: 4vmax;
+  text-align: center;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+.profileContainer > div:first-child > a:hover {
+  background: black;
+}
+
+.profileContainer > div:last-child {
+  /* justify-content: start; */
+  align-items: flex-start;
+  padding: 4vmax;
+  box-sizing: border-box;
+}
+
+.profileContainer > div:last-child > div > h4 {
+  color: rgba(0, 0, 0, 0.418);
+  font: 400 1.2vmax "Roboto";
+  padding-left: 2vmax;
+}
+
+.profileContainer > div:last-child > div > p {
+  color: black;
+  font: 500 1.8vmax "Roboto";
+  padding: 0 2vmax 2vmax 2vmax;
+}
+
+.profileContainer > div:last-child > div:last-child {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.profileContainer > div:last-child > div:last-child > a {
+  background: linear-gradient(to right, #ff9900, #f2c94c);
+  font: 400 1.5vmax "Roboto";
+  color: white;
+  text-decoration: none;
+  padding: 0.8vmax;
+  text-align: center;
+  transition: all 0.5s;
+  margin: 1vmax 0;
+  border-radius: 5px;
+}
+
+.profileContainer > div:last-child > div:last-child > a:hover {
+  background: rgb(31, 31, 31);
+}
+
+@media screen and (max-width: 600px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+  .profileContainer .profileEdit {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    margin: 2vmax 2vmax 0vmax 2vmax;
+  }
+  .profileContainer .profileDeatils {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    margin: 0vmax 2vmax 2vmax 2vmax;
+    border-radius: 0 0 10px 10px;
+    padding: 0vmax !important;
+  }
+  .profileContainer > div:first-child > h1 {
+    font: 500 3.2vmax "Roboto";
+    transform: translateY(-2vmax);
+    margin-left: 0;
+  }
+
+  .profileContainer > div:first-child > a {
+    font: 400 1.7vmax "Roboto";
+    padding: 1vmax;
+  }
+
+  .profileContainer > div:last-child {
+    text-align: center;
+    align-items: center;
+  }
+
+  .profileContainer > div:last-child > div > h4 {
+    font: 400 2vmax "Roboto";
+  }
+
+  .profileContainer > div:last-child > div > p {
+    font: 400 2.5vmax "Roboto";
+    margin: 0.5vmax 0;
+  }
+
+  .profileContainer > div:last-child > div:last-child > a {
+    font: 500 2.2vmax "Roboto";
+    padding: 1vmax;
+    margin: 2vmax 0;
+  }
+}
