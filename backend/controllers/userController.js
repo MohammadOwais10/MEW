@@ -83,9 +83,11 @@ exports.forgotPassword = catchAsyncError(async (req, res, next) => {
   //--->Get ResetPassword Token
   const resetToken = user.getResetPasswordToken();
   await user.save({ validateBeforeSave: false });
-  const resetPasswordUrl = `${req.protocol}://${req.get(
-    "host"
-  )}/api/v1/password/reset/${resetToken}`;
+
+  const resetPasswordUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`; // its because our server run on frontend 3000 and it different from backend ,,,,till the hosting we use this way
+  // const resetPasswordUrl = `${req.protocol}://${req.get(
+  //   "host"
+  // )}/api/v1/password/reset/${resetToken}`;
   const message = `Your Password reset token is :- \n\n ${resetPasswordUrl} \n\n If you have not requested this email then, Please ignore it `;
   try {
     await sendEmail({
