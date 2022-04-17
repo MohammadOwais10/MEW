@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -29,6 +29,20 @@ const ProductDetails = () => {
     value: product.ratings,
     readOnly: true,
     precision: 0.5,
+  };
+
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => {
+    if (product.stock <= quantity) return;
+    const qty = quantity + 1;
+    setQuantity(qty);
+  };
+
+  const decreaseQuantity = () => {
+    if (1 >= quantity) return;
+    const qty = quantity - 1;
+    setQuantity(qty);
   };
 
   return (
@@ -68,9 +82,9 @@ const ProductDetails = () => {
                 <h1>{`₹${product.price}`}</h1>
                 <div className="detailsBlock-3-1">
                   <div className="detailsBlock-3-1-1">
-                    <button>-</button>
-                    <input readOnly type="number" />
-                    <button>+</button>
+                    <button onClick={decreaseQuantity}>-</button>
+                    <input readOnly type="number" value={quantity} />
+                    <button onClick={increaseQuantity}>+</button>
                   </div>
                   <button>Add to Cart</button>
                 </div>
