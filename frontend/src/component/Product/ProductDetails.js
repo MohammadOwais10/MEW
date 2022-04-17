@@ -8,6 +8,7 @@ import ReactStars from "react-rating-stars-component";
 import ReviewCard from "./ReviewCard";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
+import { addItemsToCart } from "../../actions/cartAction";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -43,6 +44,11 @@ const ProductDetails = () => {
     if (1 >= quantity) return;
     const qty = quantity - 1;
     setQuantity(qty);
+  };
+
+  const addToCartHandler = () => {
+    dispatch(addItemsToCart(id, quantity));
+    alert.success("Item Added To Cart");
   };
 
   return (
@@ -86,7 +92,7 @@ const ProductDetails = () => {
                     <input readOnly type="number" value={quantity} />
                     <button onClick={increaseQuantity}>+</button>
                   </div>
-                  <button>Add to Cart</button>
+                  <button onClick={addToCartHandler}>Add to Cart</button>
                 </div>
 
                 <p>
