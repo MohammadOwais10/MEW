@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import "./Cart.css";
 import CartItemCard from "./CartItemCard";
 import { useSelector, useDispatch } from "react-redux";
-import { addItemsToCart } from "../../actions/cartAction";
+import { addItemsToCart, removeItemsFromCart } from "../../actions/cartAction";
 import { Typography } from "@material-ui/core";
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
 import { Link } from "react-router-dom";
@@ -27,6 +27,10 @@ const Cart = () => {
       return;
     }
     dispatch(addItemsToCart(id, newQty));
+  };
+
+  const deleteCartItems = (id) => {
+    dispatch(removeItemsFromCart(id));
   };
 
   const checkoutHandler = () => {
@@ -54,7 +58,7 @@ const Cart = () => {
             {cartItems &&
               cartItems.map((item) => (
                 <div className="cartContainer" key={item.product}>
-                  <CartItemCard item={item} />
+                  <CartItemCard item={item} deleteCartItems={deleteCartItems} />
                   <div className="cartInput">
                     <button
                       onClick={() =>
