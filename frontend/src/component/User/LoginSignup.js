@@ -8,13 +8,14 @@ import Profile from "../../images/Profile3.png";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Loader from "../layout/Loader/Loader";
 
 const LoginSignup = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
   const navigate = useNavigate();
+  const location = useLocation();
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
@@ -36,15 +37,18 @@ const LoginSignup = () => {
   const [avatar, setAvatar] = useState(Profile);
   const [avatarPreview, setAvatarPreview] = useState(Profile);
 
+  //here that single line mean if we are login then it move to shipping page that is 1 index otherwise it go to 0 index that means login page
+  const redirect = location.search ? location.search.split("=")[1] : "/account";
+
   useEffect(() => {
     if (error) {
       alert.error(error);
       dispatch(clearErrors());
     }
     if (isAuthenticated) {
-      navigate("/account");
+      navigate(redirect);
     }
-  }, [dispatch, error, alert, navigate, isAuthenticated]);
+  }, [dispatch, error, alert, navigate, isAuthenticated, redirect]);
 
   const switchTabs = (e, tab) => {
     if (tab === "login") {

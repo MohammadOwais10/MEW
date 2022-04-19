@@ -33,8 +33,8 @@ const Cart = () => {
     dispatch(removeItemsFromCart(id));
   };
 
-  const checkoutHandler = () => {
-    navigate("/login?redirect=shipping");
+  const checkOutHandler = () => {
+    navigate("/login?redirect=/shipping");
   };
 
   return (
@@ -97,7 +97,7 @@ const Cart = () => {
               </div>
               <div></div>
               <div className="checkOutBtn">
-                <button onClick={checkoutHandler}>Check Out</button>
+                <button onClick={checkOutHandler}>Check Out</button>
               </div>
             </div>
           </div>

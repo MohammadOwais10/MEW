@@ -1,0 +1,113 @@
+.shippingContainer {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shippingBox {
+  background-color: white;
+  width: 25vw;
+  height: 90vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.shippingHeading {
+  text-align: center;
+  color: black;
+  font: 500 1.5vmax "Roboto";
+  padding: 1.3vmax;
+  border-bottom: 2px solid orange;
+  width: 50%;
+  margin: auto;
+}
+
+.shippingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 80%;
+  transition: all 0.5s;
+}
+
+.shippingForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.shippingForm > div > input,
+.shippingForm > div > select {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgb(233 151 0);
+  border-radius: 4px;
+  font: 400 1.2vmax "Roboto";
+  outline: none;
+  background-color: white;
+}
+
+.shippingForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: #ff8800;
+}
+
+.shippingBtn {
+  border: none;
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  color: white;
+  font: 500 1.5vmax "Roboto";
+  width: 100%;
+  padding: 1vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+  margin: 2vmax;
+  border-radius: 5px;
+}
+
+.shippingBtn:hover {
+  background: rgb(179, 66, 46);
+}
+
+@media screen and (max-width: 600px) {
+  .shippingBox {
+    width: 100vw;
+    height: 95vh;
+  }
+
+  .shippingHeading {
+    font: 400 6vw "Roboto";
+    padding: 5vw;
+  }
+
+  .shippingForm {
+    padding: 11vw;
+  }
+
+  .shippingForm > div > input,
+  .shippingForm > div > select {
+    padding: 5vw 10vw;
+    font: 300 4vw "Roboto";
+  }
+
+  .shippingForm > div > svg {
+    font-size: 6vw;
+    transform: translateX(3vw);
+  }
+
+  .shippingBtn {
+    font: 300 4vw "Roboto";
+    padding: 4vw;
+  }
+}
