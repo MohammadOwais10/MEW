@@ -11,6 +11,7 @@ import TransferWithinAStationIcon from "@material-ui/icons/TransferWithinAStatio
 import { Country, State } from "country-state-city";
 import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
+import CheckoutSteps from "../Cart/CheckoutSteps.js";
 
 const Shipping = () => {
   const navigate = useNavigate();
@@ -39,6 +40,8 @@ const Shipping = () => {
 
   return (
     <Fragment>
+      <CheckoutSteps activeStep={0} />
+
       <div className="shippingContainer">
         <div className="shippingBox">
           <h2 className="shippingHeading">Shipping Details</h2>
