@@ -10,6 +10,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.8",
     "nodemailer": "^6.7.3",
+    "stripe": "^8.218.0",
     "validator": "^13.7.0"
   },
   "name": "ecommerce",
