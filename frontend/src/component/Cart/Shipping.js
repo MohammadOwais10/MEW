@@ -23,7 +23,7 @@ const Shipping = () => {
   const [city, setCity] = useState(shippingInfo.city);
   const [state, setState] = useState(shippingInfo.state);
   const [country, setCountry] = useState(shippingInfo.country);
-  const [pinCode, setPinCode] = useState(shippingInfo.pinCode);
+  const [pincode, setPinCode] = useState(shippingInfo.pincode);
   const [phoneNo, setPhoneNo] = useState(shippingInfo.phoneNo);
 
   const shippingSubmit = (e) => {
@@ -33,7 +33,7 @@ const Shipping = () => {
       return;
     }
     dispatch(
-      saveShippingInfo({ address, city, state, country, pinCode, phoneNo })
+      saveShippingInfo({ address, city, state, country, pincode, phoneNo })
     );
     navigate("/order/confirm");
   };
@@ -79,7 +79,7 @@ const Shipping = () => {
                 type="number"
                 placeholder="Pin Code"
                 required
-                value={pinCode}
+                value={pincode}
                 onChange={(e) => setPinCode(e.target.value)}
               />
             </div>
