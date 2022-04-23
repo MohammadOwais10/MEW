@@ -126,4 +126,16 @@
   .productCard > p {
     font-size: 1.7vmax;
   }
+
+  .productCard > span {
+    font-size: 2vmax;
+  }
+
+  .productCard > div > span {
+    font: 300 1.2vmax "Roboto";
+  }
+
+  #rating {
+    font-size: 2.3vmax;
+  }
 }

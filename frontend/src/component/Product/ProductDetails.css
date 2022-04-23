@@ -47,7 +47,7 @@
 }
 
 .detailsBlock-2-span {
-  font: 200 0.8vmax cursive;
+  font: 300 1vmax cursive;
   color: rgba(0, 0, 0, 0.699);
 }
 
@@ -184,6 +184,7 @@
   padding: 3vmax;
   border-radius: 2%;
 }
+
 .reviewCard > img {
   width: 5vmax;
   border-radius: 50%;
@@ -191,11 +192,12 @@
 
 .reviewCard > p {
   color: rgba(0, 0, 0, 0.836);
-  font: 600 0.9vmax "Roboto";
+  font: 600 1.2vmax "Roboto";
 }
+
 .reviewCardComment {
   color: rgba(0, 0, 0, 0.445);
-  font: 300 0.8vmax cursive;
+  font: 300 1.3vmax cursive;
 }
 
 .noReviews {
@@ -227,8 +229,13 @@
   .detailsBlock-2 {
     justify-content: center;
   }
+
   .detailsBlock-2 > span {
     font-size: 1.5vmax;
+  }
+
+  #rating {
+    font-size: 2.5vmax;
   }
 
   .detailsBlock-3 > h1 {
@@ -280,5 +287,13 @@
     padding: 1.5vmax;
     width: 20vmax;
     margin: 3vmax 0;
+  }
+
+  .reviewCard > p {
+    font: 600 3vw "Roboto";
+  }
+
+  .reviewCardComment {
+    font: 300 3vw cursive;
   }
 }

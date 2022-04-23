@@ -8,7 +8,7 @@ import {
   getProductDetails,
   newReview,
 } from "../../actions/productAction";
-import ReactStars from "react-rating-stars-component";
+import { Rating } from "@material-ui/lab";
 import ReviewCard from "./ReviewCard";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
@@ -20,7 +20,6 @@ import {
   DialogTitle,
   Button,
 } from "@material-ui/core";
-import { Rating } from "@material-ui/lab";
 import { NEW_REVIEW_RESET } from "../../constants/productConstant";
 
 const ProductDetails = () => {
@@ -56,7 +55,6 @@ const ProductDetails = () => {
   }, [dispatch, id, error, alert, reviewError, success]);
 
   const options = {
-    size: "large",
     value: product.ratings,
     readOnly: true,
     precision: 0.5,
@@ -124,7 +122,7 @@ const ProductDetails = () => {
                 <p>Product # {product._id}</p>
               </div>
               <div className="detailsBlock-2">
-                <ReactStars {...options} />
+                <Rating id="rating" {...options} />
                 <span className="detailsBlock-2-span">
                   {" "}
                   ({product.numOfReviews} Reviews)
