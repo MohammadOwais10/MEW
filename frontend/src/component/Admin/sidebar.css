@@ -1,0 +1,54 @@
+.sidebar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.sidebar > a:first-child {
+  padding: 0;
+}
+.sidebar > a > img,
+.sidebar > .tree > img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.sidebar > a > img:hover,
+.sidebar > .tree > img:hover {
+  filter: drop-shadow(0 0 10px orange);
+}
+
+.sidebar a,
+.sidebar .tree {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.493);
+  font: 200 1rem "Roboto";
+  padding: 2rem;
+  transition: all 0.5s;
+}
+
+.sidebar a:hover,
+.sidebar .tree:hover {
+  color: orange;
+  transform: scale(1.1);
+}
+
+.sidebar a > P,
+.sidebar .tree > P {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar a > p > svg,
+.sidebar .tree > p > svg {
+  margin-right: 0.5rem;
+}
+
+.MuiTypography-root {
+  background-color: #fff !important;
+}
+
+.MuiTreeItem-iconContainer svg {
+  font-size: 2vmax !important;
+}

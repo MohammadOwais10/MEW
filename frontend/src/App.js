@@ -28,6 +28,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import OrderSuccess from "./component/Cart/OrderSuccess.js";
 import MyOrders from "./component/Order/MyOrders.js";
 import OrderDetails from "./component/Order/OrderDetails.js";
+import Dashboard from "./component/Admin/Dashboard.js";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -113,6 +114,10 @@ function App() {
         <Route
           path="/order/:id"
           element={isAuthenticated ? <OrderDetails /> : <LoginSignup />}
+        />
+        <Route
+          path="/admin/dashboard"
+          element={isAuthenticated ? <Dashboard /> : <LoginSignup />}
         />
       </Routes>
       <Footer />
