@@ -117,7 +117,13 @@ function App() {
         />
         <Route
           path="/admin/dashboard"
-          element={isAuthenticated ? <Dashboard /> : <LoginSignup />}
+          element={
+            isAuthenticated && user.role === "admin" ? (
+              <Dashboard />
+            ) : (
+              <LoginSignup />
+            )
+          }
         />
       </Routes>
       <Footer />
