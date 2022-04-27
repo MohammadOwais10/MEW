@@ -30,6 +30,7 @@ import MyOrders from "./component/Order/MyOrders.js";
 import OrderDetails from "./component/Order/OrderDetails.js";
 import Dashboard from "./component/Admin/Dashboard.js";
 import ProductList from "./component/Admin/ProductList.js";
+import NewProduct from "./component/Admin/NewProduct.js";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -131,6 +132,16 @@ function App() {
           element={
             isAuthenticated && user.role === "admin" ? (
               <ProductList />
+            ) : (
+              <LoginSignup />
+            )
+          }
+        />
+        <Route
+          path="/admin/product"
+          element={
+            isAuthenticated && user.role === "admin" ? (
+              <NewProduct />
             ) : (
               <LoginSignup />
             )
