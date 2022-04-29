@@ -34,9 +34,12 @@ import {
   DELETE_USER_SUCCESS,
   DELETE_USER_RESET,
   DELETE_USER_FAIL,
+  UPDATE_USER_REQUEST,
+  UPDATE_USER_SUCCESS,
+  UPDATE_USER_RESET,
+  UPDATE_USER_FAIL,
   CLEAR_ERRORS,
 } from "../constants/userConstant";
-import axios from "axios";
 
 export const userReducer = (state = { user: {} }, action) => {
   switch (action.type) {
@@ -105,6 +108,7 @@ export const profileReducer = (state = {}, action) => {
     case UPDATE_PROFILE_REQUEST:
     case UPDATE_PASSWORD_REQUEST:
     case DELETE_USER_REQUEST:
+    case UPDATE_USER_REQUEST:
       return {
         ...state,
         loading: true,
@@ -112,6 +116,7 @@ export const profileReducer = (state = {}, action) => {
 
     case UPDATE_PROFILE_SUCCESS:
     case UPDATE_PASSWORD_SUCCESS:
+    case UPDATE_USER_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -129,6 +134,7 @@ export const profileReducer = (state = {}, action) => {
     case UPDATE_PROFILE_FAIL:
     case UPDATE_PASSWORD_FAIL:
     case DELETE_USER_FAIL:
+    case UPDATE_USER_FAIL:
       return {
         ...state,
         loading: false,
@@ -137,6 +143,7 @@ export const profileReducer = (state = {}, action) => {
 
     case UPDATE_PROFILE_RESET:
     case UPDATE_PASSWORD_RESET:
+    case UPDATE_USER_RESET:
       return {
         ...state,
         isUpdated: false,
@@ -265,16 +272,5 @@ export const userDetailsReducer = (state = { user: {} }, action) => {
 
     default:
       return state;
-  }
-};
-
-// Get User Details
-export const getUserDetails = (id) => async (dispatch) => {
-  try {
-    dispatch({ type: USER_DETAILS_REQUEST });
-    const { data } = await axios.get(`/api/v1/admin/user/${id}`);
-    dispatch({ type: USER_DETAILS_SUCCESS, payload: data.user });
-  } catch (error) {
-    dispatch({ type: USER_DETAILS_FAIL, payload: error.response.data.message });
   }
 };
