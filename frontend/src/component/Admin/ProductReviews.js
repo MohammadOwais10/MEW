@@ -2,22 +2,37 @@ import React, { Fragment, useEffect, useState } from "react";
 import { DataGrid } from "@material-ui/data-grid";
 import "./productReviews.css";
 import { useSelector, useDispatch } from "react-redux";
-import { clearErrors, getAllReviews } from "../../actions/productAction";
+import {
+  clearErrors,
+  getAllReviews,
+  deleteReviews,
+} from "../../actions/productAction";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Star from "@material-ui/icons/Star";
 import SideBar from "./Sidebar";
+import { DELETE_REVIEW_RESET } from "../../constants/productConstant";
+import { useNavigate } from "react-router-dom";
 
 const ProductReviews = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
+  const navigate = useNavigate();
 
   const { error, reviews, loading } = useSelector(
     (state) => state.productReviews
   );
 
+  const { error: deleteError, isDeleted } = useSelector(
+    (state) => state.review
+  );
+
   const [productId, setProductId] = useState("");
+
+  const deleteReviewHandler = (reviewId) => {
+    dispatch(deleteReviews(reviewId, productId));
+  };
 
   const productReviewsSubmitHandler = (e) => {
     e.preventDefault();
@@ -28,11 +43,23 @@ const ProductReviews = () => {
     if (productId.length === 24) {
       dispatch(getAllReviews(productId));
     }
+
     if (error) {
       alert.error(error);
       dispatch(clearErrors());
     }
-  }, [dispatch, alert, error, productId]);
+
+    if (deleteError) {
+      alert.error(deleteError);
+      dispatch(clearErrors());
+    }
+
+    if (isDeleted) {
+      alert.success("Review Deleted Successfully");
+      navigate("/admin/reviews");
+      dispatch({ type: DELETE_REVIEW_RESET });
+    }
+  }, [dispatch, alert, error, deleteError, navigate, isDeleted, productId]);
 
   const columns = [
     { field: "id", headerName: "Review ID", minWidth: 180, flex: 0.4 },
@@ -75,7 +102,11 @@ const ProductReviews = () => {
       renderCell: (params) => {
         return (
           <Fragment>
-            <Button>
+            <Button
+              onClick={() =>
+                deleteReviewHandler(params.getValue(params.id, "id"))
+              }
+            >
               <DeleteIcon />
             </Button>
           </Fragment>

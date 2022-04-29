@@ -8,6 +8,7 @@ import {
   productReducer,
   productReviewsReducer,
   productsReducer,
+  reviewReducer,
 } from "./reducers/productReducer";
 import {
   allUsersReducer,
@@ -43,6 +44,7 @@ const reducer = combineReducers({
   allUsers: allUsersReducer,
   userDetails: userDetailsReducer,
   productReviews: productReviewsReducer,
+  review: reviewReducer,
 });
 let initialState = {
   cart: {
