@@ -22,7 +22,7 @@ const categories = [
 ];
 
 const Products = () => {
-  const { Keyword } = useParams();
+  const { keyword } = useParams();
   const dispatch = useDispatch();
   const alert = useAlert();
   const [currentPage, setCurrentPage] = useState(1);
@@ -54,8 +54,8 @@ const Products = () => {
       alert.error(error);
       dispatch(clearErrors());
     }
-    dispatch(getProduct(Keyword, currentPage, price, category, ratings));
-  }, [dispatch, Keyword, currentPage, price, category, ratings, alert, error]);
+    dispatch(getProduct(keyword, currentPage, price, category, ratings));
+  }, [dispatch, keyword, currentPage, price, category, ratings, alert, error]);
 
   return (
     <Fragment>
