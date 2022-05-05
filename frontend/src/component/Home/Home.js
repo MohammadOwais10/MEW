@@ -33,11 +33,11 @@ const Home = () => {
         <Fragment>
           <div className="banner">
             <Carousel>
-              <img src={ban10} className="banImg" />
-              <img src={ban2} className="banImg" />
-              <img src={ban8} className="banImg" />
-              <img src={ban1} className="banImg" />
-              <img src={ban4} className="banImg" />
+              <img src={ban10} className="banImg" alt="Carousel" />
+              <img src={ban2} className="banImg" alt="Carousel " />
+              <img src={ban8} className="banImg" alt="Carousel " />
+              <img src={ban1} className="banImg" alt="Carousel " />
+              <img src={ban4} className="banImg" alt="Carousel " />
             </Carousel>
             <a href="#container">
               <button>

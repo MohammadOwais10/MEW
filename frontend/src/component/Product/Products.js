@@ -11,14 +11,13 @@ import Typography from "@material-ui/core/Typography";
 import { useAlert } from "react-alert";
 
 const categories = [
-  "Laptop",
-  "T-shirt",
-  "Footwear",
-  "Bottom",
-  "Tops",
-  "Attire",
-  "Camera",
-  "SmartPhones",
+  "Kurta",
+  "Kurta Pajma",
+  "Floral Kurta",
+  "Sherwani",
+  "Wedding",
+  "Jacket ",
+  "Indo Western",
 ];
 
 const Products = () => {

@@ -29,14 +29,13 @@ const NewProduct = () => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Laptop",
-    "T-shirt",
-    "Footwear",
-    "Bottom",
-    "Tops",
-    "Attire",
-    "Camera",
-    "SmartPhones",
+    "Kurta",
+    "Kurta Pajma",
+    "Floral Kurta",
+    "Sherwani",
+    "Wedding",
+    "Jacket ",
+    "Indo Western",
   ];
 
   useEffect(() => {
