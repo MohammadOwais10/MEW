@@ -1,11 +1,5 @@
 .productsHeading {
-  margin: 2vmax auto;
-  width: 15vw;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.171);
-  padding: 2vmax;
-  color: rgba(0, 0, 0, 0.678);
-  font: 600 2vmax "Roboto";
-  text-align: center;
+  display: none;
 }
 
 .products {
@@ -14,7 +8,7 @@
   padding: 0 5vmax;
   justify-content: center;
   min-height: 30vh;
-  margin-left: 5vmax;
+  margin: 8vmax 0 0 8vmax;
 }
 
 .paginationBox {
@@ -44,6 +38,7 @@
 .page-item:last-child {
   border-radius: 0 5px 5px 0;
 }
+
 .page-link {
   text-decoration: none;
   font: 500 1.2vmax "Roboto";
@@ -83,13 +78,15 @@
 .category-link {
   list-style: none;
   color: rgba(0, 0, 0, 0.61);
-  font: 400 1vmax "Roboto";
+  font: 400 1.5vmax "Roboto";
   margin: 0.4vmax;
   cursor: pointer;
   transition: all 0.5s;
 }
+
 .category-link:hover {
   color: rgb(233, 151, 0);
+  font-size: 1.65vmax;
 }
 
 .filterBox > fieldset {
@@ -98,17 +95,62 @@
   margin: 0;
 }
 
-@media screen and (max-width: 600px) {
-  .filterBox {
-    width: 20vmax;
-    position: static;
-    margin: auto;
+.mobile-settingMenu {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .productsHeading {
+    display: block;
+    margin: 12vmax auto auto auto;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+    padding: 2vmax;
+    color: rgba(0, 0, 0, 0.678);
+    font: 600 2.5vmax "Roboto";
+    text-align: center;
   }
 
+  .mobile-settingMenu {
+    position: absolute;
+    display: block;
+    top: 13vmax;
+    left: 2vmax;
+  }
+
+  .filterBox {
+    display: none;
+  }
+
+  .mobile-filterBox {
+    display: block;
+    padding: 2vmax;
+    width: 85%;
+    position: absolute;
+    top: 18vmax;
+    background-color: #f7b733;
+    margin: 2vmax;
+  }
+
+  .products {
+    padding: 0;
+    margin: 1vmax 0 0 0;
+  }
+
+  .filterBox {
+    width: 13vmax;
+    top: 15vmax;
+    left: 2vmax;
+  }
   .page-link {
     font: 300 1.7vmax "Roboto";
   }
   .category-link {
     font: 400 1.8vmax "Roboto";
+  }
+
+  .category-link:hover {
+    color: white;
+    font-size: 2vmax;
   }
 }

@@ -48,7 +48,7 @@
 .container {
   display: flex;
   margin: 2vmax auto;
-  width: 80vw;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;

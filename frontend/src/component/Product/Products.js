@@ -9,6 +9,8 @@ import Pagination from "react-js-pagination";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
 import { useAlert } from "react-alert";
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
+import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
 
 const categories = [
   "Kurta",
@@ -56,6 +58,8 @@ const Products = () => {
     dispatch(getProduct(keyword, currentPage, price, category, ratings));
   }, [dispatch, keyword, currentPage, price, category, ratings, alert, error]);
 
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
+
   return (
     <Fragment>
       {loading ? (
@@ -71,7 +75,21 @@ const Products = () => {
               ))}
           </div>
 
-          <div className="filterBox">
+          <button
+            className=" mobile-settingMenu"
+            onClick={() => setShowMediaIcons(!showMediaIcons)}
+          >
+            {showMediaIcons ? (
+              <SettingsInputComponentIcon />
+            ) : (
+              <SettingsApplicationsIcon />
+            )}
+          </button>
+
+          <div
+            className={showMediaIcons ? "mobile-filterBox" : "filterBox"}
+            onClick={() => setShowMediaIcons(false)}
+          >
             <Typography>Price</Typography>
             <Slider
               value={price}
