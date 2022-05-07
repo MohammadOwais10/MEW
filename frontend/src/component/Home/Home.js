@@ -12,6 +12,8 @@ import ban2 from "../../images/ban2.webp";
 import ban4 from "../../images/ban4.jpg";
 import ban8 from "../../images/ban8.jpg";
 import ban10 from "../../images/ban10.jpg";
+import { Link } from "react-router-dom";
+import MoreProductBanner from "../../images/ethnic-mens (1).jpg";
 
 const Home = () => {
   const alert = useAlert();
@@ -51,6 +53,13 @@ const Home = () => {
           <div className="container">
             {products &&
               products.map((product) => <Product product={product} />)}
+
+            <Link to="/Products">
+              <button className="moreProductsBtn">
+                <h1>Show More Product</h1>
+                <img src={MoreProductBanner} alt="Banner More Product" />
+              </button>
+            </Link>
           </div>
         </Fragment>
       )}

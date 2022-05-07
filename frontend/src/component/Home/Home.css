@@ -106,6 +106,52 @@
   transform: translateY(-1vmax);
 }
 
+.moreProductsBtn {
+  width: 32vmax;
+  height: 30vmax;
+  margin: 2vmax;
+  padding: 0 !important;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.moreProductsBtn:hover {
+  transform: scale(1.1);
+}
+
+.moreProductsBtn > h1 {
+  position: absolute;
+  z-index: 5;
+  width: 23vmax;
+  height: 19vmax;
+  font: 800 5vmax "Roboto";
+  margin: 4vmax;
+  text-align: center;
+  color: white;
+  border: 5px solid white;
+  padding: 5px;
+}
+
+.moreProductsBtn > img {
+  z-index: 3;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  filter: blur(2.5px);
+}
+
+@media screen and (min-width: 477px) and (max-width: 793px) {
+  .moreProductsBtn {
+    width: 55vmax;
+    height: 15vmax;
+    margin: 0 !important;
+  }
+  .moreProductsBtn > h1 {
+    margin: 3vmax;
+    width: 46vmax;
+    height: 6.5vmax;
+  }
+}
 @media screen and (max-width: 600px) {
   .productCard > p {
     font-size: 1.7vmax;
