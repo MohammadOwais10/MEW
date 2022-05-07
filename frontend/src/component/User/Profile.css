@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   background: #f8b500;
-  margin: 2vmax 0 2vmax 2vmax;
+  margin: 105px 0 2vmax 2vmax;
   border-radius: 10px 0px 0px 10px;
 }
 .profileContainer .profileDeatils {
@@ -31,7 +31,7 @@
   align-items: center;
   /* background: #e2e2e2; */
   background: #bdc3c7;
-  margin: 2vmax 2vmax 2vmax 0;
+  margin: 105px 2vmax 2vmax 0;
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -115,12 +115,12 @@
   .profileContainer {
     flex-direction: column;
   }
+
   .profileContainer .profileEdit {
     width: auto;
     height: 100%;
-    margin: 0;
     border-radius: 10px 10px 0 0;
-    margin: 2vmax 2vmax 0vmax 2vmax;
+    margin: 13vmax 2vmax 0vmax 2vmax;
   }
   .profileContainer .profileDeatils {
     width: auto;
