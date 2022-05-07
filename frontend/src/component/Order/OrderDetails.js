@@ -100,9 +100,11 @@ const OrderDetails = () => {
                   order.orderItems.map((item) => (
                     <div key={item.product}>
                       <img src={item.image} alt="Product" />
-                      <Link to={`/product/${item.product}`}>
-                        {item.name}
-                      </Link>{" "}
+                      <Link to={`/product/${item.product}`}>{item.name}</Link>
+                      <div className="sizeClass">
+                        <p>Size:</p>
+                        <b>{` ${item.size}`}</b>
+                      </div>
                       <span>
                         {item.quantity} X ₹{item.price} ={" "}
                         <b>₹{item.price * item.quantity}</b>

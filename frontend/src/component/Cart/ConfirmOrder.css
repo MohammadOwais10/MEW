@@ -77,6 +77,11 @@
   text-decoration: none;
 }
 
+.sizeClass {
+  padding: 0 3vmax;
+  color: #5e5e5e;
+}
+
 .confirmCartItemsContainer > div > span {
   font: 100 1.3vmax "Roboto";
   color: #5e5e5e;

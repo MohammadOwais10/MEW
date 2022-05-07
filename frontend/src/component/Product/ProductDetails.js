@@ -26,6 +26,8 @@ const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const alert = useAlert();
+  const sizes = ["S", "M", "L"];
+  const [size, setSize] = useState("S");
 
   const { product, loading, error } = useSelector(
     (state) => state.productDetails
@@ -52,7 +54,7 @@ const ProductDetails = () => {
     }
 
     dispatch(getProductDetails(id));
-  }, [dispatch, id, error, alert, reviewError, success]);
+  }, [dispatch, id, error, alert, reviewError, success, size]);
 
   const options = {
     value: product.ratings,
@@ -78,7 +80,7 @@ const ProductDetails = () => {
   };
 
   const addToCartHandler = () => {
-    dispatch(addItemsToCart(id, quantity));
+    dispatch(addItemsToCart(id, quantity, size));
     alert.success("Item Added To Cart");
   };
 
@@ -136,13 +138,26 @@ const ProductDetails = () => {
                     <input readOnly type="number" value={quantity} />
                     <button onClick={increaseQuantity}>+</button>
                   </div>
-                  <button
-                    disabled={product.stock < 1 ? true : false}
-                    onClick={addToCartHandler}
-                  >
-                    Add to Cart
-                  </button>
+
+                  <div className="sizeBlock">
+                    <select required onChange={(e) => setSize(e.target.value)}>
+                      <option disabled="disabled">Size</option>
+                      {sizes?.map((size) => (
+                        <option key={size} value={size}>
+                          {size}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
+
+                <button
+                  className="addCartButton"
+                  disabled={product.stock < 1 ? true : false}
+                  onClick={addToCartHandler}
+                >
+                  Add to Cart
+                </button>
 
                 <p>
                   Status:

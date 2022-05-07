@@ -75,6 +75,7 @@
   color: white;
   transition: all 0.5s;
 }
+
 .detailsBlock-3-1-1 > button:hover {
   background-color: black;
 }
@@ -92,20 +93,38 @@
   border-radius: 5px;
 }
 
-.detailsBlock-3-1 > button:last-child {
+.sizeBlock {
+  margin-left: 1vmax;
+}
+
+.sizeBlock > select {
+  padding: 0.5vmax;
+  text-align: center;
+  border-color: #f7b733;
+  border-radius: 5px;
+  font-size: 1.5vmax;
+  background-color: #ffe159;
+}
+
+.sizeBlock > select :hover {
+  background-color: #fc4a1a;
+}
+
+.addCartButton {
+  width: 16vmax;
   border: none;
   cursor: pointer;
   color: white;
   transition: all 0.5s;
   background: linear-gradient(to right, #fc4a1a, #f7b733);
-  font: 500 1.5vmax "Roboto";
-  border-radius: 20px;
+  font: 500 1.8vmax "Roboto";
+  border-radius: 10px;
   padding: 0.8vmax 1.5vmax;
-  margin: 1vmax;
+  margin-top: 1vmax;
   outline: none;
 }
 
-.detailsBlock-3-1 > button:last-child:hover {
+.addCartButton:hover {
   background: linear-gradient(to right, #ffb75e, #fffb0a);
 }
 

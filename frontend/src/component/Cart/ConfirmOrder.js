@@ -67,6 +67,10 @@ const ConfirmOrder = () => {
                     <Link to={`/product/${item.product}`}>
                       {item.name}
                     </Link>{" "}
+                    <div className="sizeClass">
+                      <p>Size:</p>
+                      <b>{` ${item.size}`}</b>
+                    </div>
                     <span>
                       {item.quantity} X ₹{item.price} ={" "}
                       <b>₹{item.price * item.quantity}</b>
