@@ -7,7 +7,7 @@
 }
 
 .CartItemCard > img {
-  width: 8vmax;
+  width: 7.5vmax;
 }
 
 .CartItemCard > div {
@@ -18,7 +18,7 @@
 
 .CartItemCard > div > a {
   font: 500 1.5vmax "Roboto";
-  color: rgba(24, 24, 24, 0.815);
+  color: #f7b733;
   text-decoration: none;
 }
 
@@ -35,16 +35,16 @@
 
 @media screen and (max-width: 600px) {
   .CartItemCard {
-    padding: 2vmax;
     height: 20vmax;
   }
 
   .CartItemCard > img {
-    width: 10vmax;
+    width: 11vmax;
   }
 
   .CartItemCard > div {
-    margin: 1vmax 2vmax;
+    width: 8vmax;
+    margin: 1vmax 1.5vmax;
   }
 
   .CartItemCard > div > a {

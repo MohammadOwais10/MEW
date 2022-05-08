@@ -29,14 +29,14 @@
 }
 
 .cartPage {
-  padding: 2.5vmax;
+  padding: 100px 2.5vmax 2.5vmax 2.5vmax;
 }
 
 .cartHeader {
   background: linear-gradient(to right, #fc4a1a, #f7b733);
-  width: 88%;
+  width: 90%;
   box-sizing: border-box;
-  margin: auto 5vmax;
+  margin: auto;
   color: white;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
@@ -50,7 +50,7 @@
 
 .cartHeader > p:last-child {
   text-align: center;
-  margin-right: -1.5vmax;
+  margin-right: 0;
 }
 
 .cartContainer {
@@ -111,9 +111,9 @@
 
 .cartGrossProfitBox {
   border-top: 3px solid orange;
-  margin-right: 6vmax;
+  width: 88%;
   box-sizing: border-box;
-  padding: 1.5vmax 4vmax 1.5vmax 2vmax;
+  padding: 1.5vmax 6vmax 1.5vmax 2vmax;
   font: 500 1.5vmax "Roboto";
   display: flex;
   justify-content: space-between;
@@ -131,7 +131,7 @@
   padding: 0.8vmax 4vmax;
   width: 100%;
   font: 500 1.8vmax "Roboto";
-  margin: 1vmax 5.5vmax 1vmax 0vmax;
+  margin: 1vmax 5vmax 1vmax 0vmax;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -142,15 +142,14 @@
 
 @media screen and (max-width: 600px) {
   .cartPage {
-    padding: 0;
+    padding: 95px 1vmax 1vmax 1vmax;
     min-height: 60vh;
   }
 
   .cartHeader {
-    width: 96%;
+    width: 100%;
     font: 500 1.8vmax "Roboto";
     grid-template-columns: 2fr 1fr 1fr;
-    margin: 8.5vmax 0vmax 0 1vmax;
   }
 
   .cartHeader > p:last-child {
@@ -165,6 +164,7 @@
 
   .cartInput {
     height: 20vmax;
+    margin: 0;
   }
 
   .cartInput > button {
@@ -191,15 +191,15 @@
   }
 
   .cartGrossProfitBox {
-    padding: 2vmax 1vmax 1vmax 1vmax;
+    width: 100%;
+    padding: 2vmax 2vmax 1vmax 1vmax;
     font: 300 2vmax "Roboto";
-    margin: 0 1vmax;
   }
 
   .checkOutBtn > button {
     padding: 2vmax 4vmax;
     width: 100%;
     font: 300 2vmax "Roboto";
-    margin: 1vmax 2vmax;
+    margin: 1vmax;
   }
 }
