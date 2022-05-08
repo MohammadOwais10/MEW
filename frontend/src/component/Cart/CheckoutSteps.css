@@ -1,3 +1,7 @@
+.MuiStepper-alternativeLabel {
+  margin-top: 80px;
+}
+
 .MuiStepConnector-line {
   display: none !important;
 }
