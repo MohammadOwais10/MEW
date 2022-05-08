@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Typography } from "@material-ui/core";
 import { useAlert } from "react-alert";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import {
   CardNumberElement,
   CardCvcElement,
@@ -112,7 +113,10 @@ const Payment = () => {
       <CheckoutSteps activeStep={2} />
       <div className="paymentContainer">
         <form className="paymentForm" onSubmit={(e) => submitHandler(e)}>
-          <Typography>Card Info</Typography>
+          <Typography>
+            <AccountBalanceIcon />
+            Card Info
+          </Typography>
           <div>
             <CreditCardIcon />
             <CardNumberElement className="paymentInput" />

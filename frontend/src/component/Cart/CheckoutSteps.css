@@ -16,9 +16,3 @@
   background-color: darkorange;
   height: 2px;
 }
-
-@media screen and (max-width: 600px) {
-  .MuiStepper-root {
-    margin-right: 8px;
-  }
-}
