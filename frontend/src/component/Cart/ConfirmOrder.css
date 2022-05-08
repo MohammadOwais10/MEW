@@ -23,7 +23,9 @@
 
 .confirmshippingAreaBox,
 .confirmCartItemsContainer {
-  margin: 2vmax;
+  border: 2px solid grey;
+  padding: 1vmax;
+  background: whitesmoke;
 }
 
 .confirmshippingAreaBox > div {
@@ -63,7 +65,7 @@
   font: 400 1.3vmax "Roboto";
   align-items: center;
   justify-content: space-between;
-  margin: 2vmax 0;
+  margin-bottom: 1vmax;
 }
 
 .confirmCartItemsContainer > div > img {
@@ -88,7 +90,10 @@
 }
 
 .orderSummary {
-  padding: 5vmax 9vmax 5vmax 3.5vmax;
+  border: 2px solid grey;
+  margin: 5vmax 4vmax;
+  background: whitesmoke;
+  padding: 2vmax;
 }
 
 .orderSummary > p {
@@ -107,7 +112,7 @@
   display: flex;
   font: 400 1.3vmax "Roboto";
   justify-content: space-between;
-  margin: 2vmax 0;
+  margin: 2vmax;
 }
 
 .orderSummary > div > div > span {
@@ -119,7 +124,7 @@
   font: 500 1.5vmax "Roboto";
   justify-content: space-between;
   border-top: 2px solid rgba(0, 0, 0, 0.363);
-  padding: 2vmax 0;
+  padding: 2vmax;
 }
 
 .orderSummary > button {
@@ -128,7 +133,6 @@
   width: 100%;
   padding: 1vmax;
   border: none;
-  margin: auto;
   cursor: pointer;
   transition: 0.5s;
   font: 500 2vmax "Roboto";
@@ -148,6 +152,11 @@
   .confirmOrderPage > div:last-child {
     border-left: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.247);
+    padding: 2vmax 3vmax 3vmax 3vmax;
+  }
+
+  .confirmshippingArea {
+    padding: 2vmax 3vmax 3vmax 3vmax;
   }
 
   .confirmshippingArea > p {
@@ -168,18 +177,21 @@
     font: 100 4vw "Roboto";
   }
 
+  .confirmCartItems {
+    padding: 2vmax 3vmax 3vmax 3vmax;
+  }
   .confirmCartItems > p {
     font: 400 6vw "Roboto";
     width: 83%;
   }
 
   .confirmCartItemsContainer {
-    max-height: 50vw;
+    max-height: 100%;
   }
 
   .confirmCartItemsContainer > div {
     font: 400 4vw "Roboto";
-    margin: 4vw 0;
+    margin-bottom: 4vw;
   }
 
   .confirmCartItemsContainer > div > img {
@@ -196,7 +208,8 @@
   }
 
   .orderSummary {
-    padding: 2vmax 11vmax 2vmax 6.5vmax;
+    padding: 2vmax;
+    margin: 0;
   }
 
   .orderSummary > p {
@@ -217,10 +230,10 @@
 
   .orderSummary > button {
     padding: 4vw;
-    margin: 4vw auto;
+    margin: 0;
     font: 500 5vw "Roboto";
     box-sizing: unset;
-    width: 93%;
+    width: 90%;
     border-radius: 5px;
   }
 }

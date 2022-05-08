@@ -83,7 +83,7 @@ const ConfirmOrder = () => {
         {/*  */}
         <div>
           <div className="orderSummary">
-            <Typography>Order Summery</Typography>
+            <Typography>Order Summary</Typography>
             <div>
               <div>
                 <p>Subtotal:</p>
