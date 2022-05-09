@@ -81,13 +81,15 @@ const Dashboard = () => {
             </Link>
           </div>
         </div>
-
-        <div className="lineChart">
-          <Line data={lineState} />
+        <div className="graphContainer">
+          <div className="lineChart">
+            <Line data={lineState} />
+          </div>
         </div>
-
-        <div className="doughnutChart">
-          <Doughnut data={doughnutState} />
+        <div className="chartContainer">
+          <div className="doughnutChart">
+            <Doughnut data={doughnutState} />
+          </div>
         </div>
       </div>
     </div>

@@ -4,12 +4,15 @@
   display: grid;
   grid-template-columns: 1fr 5fr;
   position: absolute;
+  top: 0;
+  margin-top: 80px;
+  background-color: white;
 }
 
 .dashboardContainer {
-  border-left: 1px solid rgba(0, 0, 0, 0.13);
-  background-color: rgb(255, 255, 255);
-  padding: 3rem 0;
+  border-left: 5px solid rgba(0, 0, 0, 0.13);
+  background-color: white;
+  padding: 2vmax;
 }
 
 .dashboardContainer > h1 {
@@ -17,7 +20,6 @@
   font: 500 2rem "Roboto";
   text-align: center;
   width: 50%;
-  padding: 1.5rem;
   margin: auto;
 }
 
@@ -27,8 +29,9 @@
 
 .dashboardSummary > div {
   display: flex;
-  background-color: white;
+  background-color: whitesmoke;
   justify-content: center;
+  border-radius: 5px;
 }
 
 .dashboardSummary > div > p {
@@ -38,7 +41,8 @@
   text-align: center;
   padding: 1.5rem;
   width: 100%;
-  margin: 0 2rem;
+  margin: 2rem 2rem 0 2rem;
+  border-radius: 5px;
 }
 
 .dashboardSummaryBox2 > a {
@@ -68,17 +72,28 @@
   color: rgb(255, 255, 255);
 }
 
+.graphContainer,
+.chartContainer {
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
 .lineChart {
-  width: 80%;
+  width: 90%;
   margin: auto;
+}
+
+.lineChart > canvas {
+  padding: 2vmax;
 }
 
 .doughnutChart {
   width: 30vmax;
-  margin: auto;
+  margin: 2vmax auto;
+  padding: 2vmax;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .dashboard {
     grid-template-columns: 1fr;
   }
