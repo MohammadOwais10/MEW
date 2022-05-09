@@ -49,18 +49,18 @@ const UsersList = () => {
   }, [dispatch, alert, error, deleteError, navigate, isDeleted, message]);
 
   const columns = [
-    { field: "id", headerName: "User ID", minWidth: 150, flex: 0.4 },
+    { field: "id", headerName: "User ID", minWidth: 200, flex: 0.5 },
 
     {
       field: "email",
       headerName: "Email",
-      minWidth: 150,
-      flex: 0.3,
+      minWidth: 200,
+      flex: 0.5,
     },
     {
       field: "name",
       headerName: "Name",
-      minWidth: 120,
+      minWidth: 130,
       flex: 0.3,
     },
 
@@ -68,8 +68,8 @@ const UsersList = () => {
       field: "role",
       headerName: "Role",
       type: "number",
-      minWidth: 120,
-      flex: 0.2,
+      minWidth: 130,
+      flex: 0.3,
       cellClassName: (params) => {
         return params.getValue(params.id, "role") === "admin"
           ? "greenColor"
