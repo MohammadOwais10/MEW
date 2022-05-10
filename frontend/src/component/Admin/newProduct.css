@@ -1,12 +1,14 @@
 .newProductContainer {
   width: 100%;
   box-sizing: border-box;
-  background-color: rgb(221, 221, 221);
-  border-left: 1px solid rgba(0, 0, 0, 0.158);
-  display: flex;
+  background-color: white;
+  border-left: 3px solid rgba(0, 0, 0, 0.158);
+  /* display: flex; */
   flex-direction: column;
   height: 100vh;
+  padding-top: 50px;
 }
+
 .newProductContainer h1 {
   color: black;
   font: 500 2rem "Roboto";
@@ -18,11 +20,11 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  padding: 3vmax;
+  padding: 2vmax 5vmax;
   justify-content: space-evenly;
   height: 70%;
-  width: 40vh;
-  background-color: white;
+  width: 45vh;
+  background-color: whitesmoke;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
   border-radius: 5px;
 }
@@ -32,6 +34,7 @@
   width: 100%;
   align-items: center;
 }
+
 .createProductForm > div > input,
 .createProductForm > div > select,
 .createProductForm > div > textarea {
@@ -105,23 +108,25 @@
   background: lightgray;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .newProductContainer {
-    background-color: rgb(255, 255, 255);
+    padding: 1;
   }
+
   .createProductForm {
-    padding: 5vmax;
+    padding: 3vmax;
+    width: fit-content;
   }
 
   .createProductForm > div > input,
   .createProductForm > div > select,
   .createProductForm > div > textarea {
-    padding: 2.5vmax 5vmax;
-    font: 400 2vmax "Roboto";
+    padding: 2vmax 4vmax;
+    font: 400 1.8vmax "Roboto";
   }
 
   .createProductForm > div > svg {
-    font-size: 2.8vmax;
+    font-size: 2.2vmax;
   }
 
   #createProductFormFile > img {
