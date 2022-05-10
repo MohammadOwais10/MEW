@@ -19,7 +19,10 @@
 
 .orderDetailsContainerBox,
 .orderDetailsCartItemsContainer {
-  margin: 2vmax;
+  padding: 2vmax;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 2px solid lightgrey;
 }
 
 .orderDetailsContainerBox > div {
@@ -28,12 +31,12 @@
 }
 
 .orderDetailsContainerBox > div > p {
-  font: 400 1vmax "Roboto";
+  font: 500 1.5vmax "Roboto";
   color: black;
 }
 .orderDetailsContainerBox > div > span {
   margin: 0 1vmax;
-  font: 100 1vmax "Roboto";
+  font: 100 1.5vmax "Roboto";
   color: #575757;
 }
 
@@ -72,10 +75,6 @@
 @media screen and (max-width: 600px) {
   .orderDetailsContainer > p {
     font: 400 6vw "Roboto";
-  }
-
-  .orderDetailsContainerBox > div {
-    margin: 6vw 0;
   }
 
   .orderDetailsContainerBox > div > p {

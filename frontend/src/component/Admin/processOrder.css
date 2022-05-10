@@ -1,7 +1,8 @@
 .updateOrderForm {
-  margin: 5vmax 0;
+  margin: 5vmax 2vmax;
   padding: 3vmax;
-  background-color: white;
+  background-color: whitesmoke;
+  border-radius: 5px;
 }
 
 .updateOrderForm > div {
@@ -15,9 +16,9 @@
   margin: 2rem 0;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.267);
+  border: 1px solid orange;
   border-radius: 4px;
-  font: 300 0.9vmax "Roboto";
+  font: 500 1.5vmax "Roboto";
   outline: none;
 }
 
@@ -25,7 +26,7 @@
   position: absolute;
   transform: translateX(1vmax);
   font-size: 1.6vmax;
-  color: rgba(0, 0, 0, 0.623);
+  color: orange;
 }
 
 @media screen and (max-width: 600px) {
@@ -40,5 +41,10 @@
 
   .updateOrderForm > div > svg {
     font-size: 2.8vmax;
+  }
+
+  .specialHeader {
+    font: 400 6vw "Roboto";
+    text-align: center !important;
   }
 }

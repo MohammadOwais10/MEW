@@ -1,5 +1,5 @@
 .confirmOrderPage {
-  height: 65vh;
+  height: 100%;
   background-color: white;
   display: grid;
   grid-template-columns: 4fr 3.5fr;
@@ -23,9 +23,10 @@
 
 .confirmshippingAreaBox,
 .confirmCartItemsContainer {
-  border: 2px solid grey;
+  border: 2px solid lightgrey;
   padding: 1vmax;
   background: whitesmoke;
+  border-radius: 3px;
 }
 
 .confirmshippingAreaBox > div {
@@ -53,11 +54,6 @@
 
 .confirmCartItems {
   padding: 2vmax 4vmax 2vmax 6.5vmax;
-}
-
-.confirmCartItemsContainer {
-  max-height: 20vmax;
-  overflow-y: auto;
 }
 
 .confirmCartItemsContainer > div {
@@ -90,7 +86,7 @@
 }
 
 .orderSummary {
-  border: 2px solid grey;
+  border-radius: 5px;
   margin: 5vmax 4vmax;
   background: whitesmoke;
   padding: 2vmax;
@@ -151,8 +147,9 @@
 
   .confirmOrderPage > div:last-child {
     border-left: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.247);
+    border-top: 3px dotted rgba(0, 0, 0, 0.247);
     padding: 2vmax 3vmax 3vmax 3vmax;
+    width: 90%;
   }
 
   .confirmshippingArea {

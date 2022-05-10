@@ -69,7 +69,9 @@ const ProcessOrder = () => {
             >
               <div>
                 <div className="confirmshippingArea">
-                  <Typography>Shipping Info</Typography>
+                  <Typography className="specialHeader">
+                    Shipping Info
+                  </Typography>
                   <div className="orderDetailsContainerBox">
                     <div>
                       <p>Name:</p>
