@@ -110,11 +110,11 @@
 
 @media screen and (max-width: 850px) {
   .newProductContainer {
-    padding: 1;
+    padding: 1vmax;
   }
 
   .createProductForm {
-    padding: 3vmax;
+    padding: 2vmax 5vmax;
     width: fit-content;
   }
 

@@ -5,19 +5,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(231, 231, 231);
+  background-color: white;
   position: fixed;
   top: 0%;
   left: 0;
 }
 
 .LoginSignupBox {
-  background-color: white;
-  width: 26vw;
+  background-color: whitesmoke;
+  width: 40vw;
   height: 65vh;
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 2%;
+  box-shadow: 0 0 10px rgb(0 0 0 / 27%);
 }
 .LoginSignupToggle {
   display: flex;
@@ -50,7 +51,7 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  padding: 2vmax;
+  padding: 2vmax 5vmax;
   justify-content: space-evenly;
   height: 70%;
   transition: all 0.5s;
@@ -161,13 +162,13 @@
   transform: translateX(100%);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .LoginSignupContainer {
     background-color: white;
   }
   .LoginSignupBox {
-    width: 100vw;
-    height: 95vh;
+    width: 55vw;
+    height: 70vh;
   }
   .LoginSignupToggle {
     height: 5vmax;
@@ -179,6 +180,59 @@
   .loginForm,
   .signupForm {
     padding: 5vmax;
+  }
+
+  .loginForm > div > input,
+  .signupForm > div > input {
+    padding: 2vmax 5vmax;
+    font: 300 1.7vmax "Roboto";
+  }
+
+  .loginForm > div > svg,
+  .signupForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  .loginForm > a {
+    font: 500 1.8vmax "Gill Sans";
+  }
+
+  #registerImage > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #registerImage > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax "Roboto";
+  }
+
+  .loginBtn,
+  .signupBtn {
+    font: 300 3vmax "Roboto";
+    padding: 1.8vmax;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .LoginSignupContainer {
+    top: 30px;
+    background-color: white;
+  }
+  .LoginSignupBox {
+    width: 90vw;
+    height: 75vh;
+  }
+  .LoginSignupToggle {
+    height: 5vmax;
+  }
+  .LoginSignupToggle > p {
+    font: 500 2vmax "Roboto";
+  }
+
+  .loginForm,
+  .signupForm {
+    padding: 0vmax 5vmax;
   }
 
   .loginForm > div > input,
