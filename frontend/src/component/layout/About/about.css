@@ -1,132 +1,91 @@
-.aboutSection {
-  height: 100vh;
+.aboutContainer {
+  display: flex;
+  min-height: 100vh;
   width: 100vw;
+  top: 0%;
+  left: 0%;
   max-width: 100%;
-  background-color: lightgrey;
-  display: grid;
-  grid-template-columns: 4fr 4fr;
-  position: fixed;
+  background-color: white;
 }
 
-.aboutSectionGradient {
-  background: linear-gradient(to right, #f19011, #f5af19);
-}
-
-.aboutSectionContainer {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background-color: rgb(255, 255, 255);
-  width: 80vw;
-  height: 80vh;
-  transform: translateX(-50%) translateY(-50%);
-  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.192);
-
+.aboutContainer .aboutProfile {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.aboutSectionContainer > h1 {
-  font: 400 3vmax "Roboto";
-  color: orange;
-  margin: 2vmax;
-}
-
-.aboutSectionContainer > div {
-  display: flex;
+  height: auto;
   width: 100%;
-}
-
-.aboutSectionContainer > div > div {
-  width: 100%;
-  display: flex;
+  max-width: 100%;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 2vmax;
-  box-sizing: border-box;
+  background: linear-gradient(to right, #f7971e, #ffd200);
+  margin: 105px 0 2vmax 2vmax;
+  border-radius: 10px 0px 0px 10px;
+  padding: 1vmax 0;
 }
 
-.aboutSectionContainer > div > div > p {
-  color: rgba(0, 0, 0, 0.623);
-  font: 100 1vmax "Roboto";
+.aboutContainer .aboutProfile > h1 {
+  font: 500 2vmax "Roboto";
 }
 
-.aboutSectionContainer > div > div > button {
-  margin: 1vmax 0;
+.aboutContainer .aboutProfile > span {
+  margin: 1vmax;
+  color: black;
+  font-family: "Roboto";
 }
 
-.aboutSectionContainer > div > div > span {
-  font: 100 1vmax "Roboto";
-  color: rgba(0, 0, 0, 0.616);
-  text-align: center;
-  width: 80%;
+.aboutContainer .aboutDeatils {
+  display: flex;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eef2f3;
+  margin: 105px 2vmax 2vmax 0;
+  border-radius: 0px 10px 10px 0px;
 }
 
-.aboutSectionContainer2 {
-  border-left: 1px solid rgba(0, 0, 0, 0.116);
+.inspiration,
+.philosophy,
+.craft,
+.mission {
+  color: white;
+  font-family: "Roboto";
+  border-radius: 5px;
+  padding: 1vmax;
+  margin: 1vmax;
 }
 
-.aboutSectionContainer2 > h2 {
-  color: rgba(0, 0, 0, 0.623);
-  font: 100 2vmax "Roboto";
-  margin: 2vmax;
+.inspiration {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+.philosophy {
+  background: linear-gradient(to right, #ec008c, #fc6767);
+}
+.craft {
+  background: linear-gradient(to right, #da22ff, #9733ee);
+}
+.mission {
+  background: linear-gradient(to right, #396afc, #2948ff);
 }
 
-.aboutSectionContainer2 > a > svg {
-  font-size: 4vmax;
-}
-
-.youtubeSvgIcon {
-  color: rgb(241, 36, 0);
-}
-
-.instagramSvgIcon {
-  color: #833ab4;
-}
-
-.facebookSvgIcon {
-  color: #0076c5;
-}
-
-.twitterSvgIcon {
-  color: #009cda;
-}
 @media screen and (max-width: 600px) {
-  .aboutSectionContainer > div {
-    display: block;
+  .aboutContainer {
+    flex-direction: column;
   }
 
-  .aboutSectionContainer2 {
-    display: flex;
-    flex-direction: row !important;
+  .aboutContainer .aboutProfile {
+    width: auto;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    margin: 70px 2vmax 0vmax 2vmax;
   }
-
-  .aboutSectionContainer > h1 {
-    font: 400 5vmax "Roboto";
-    margin: 3vmax;
-  }
-
-  .aboutSectionContainer > div > div > p {
-    font: 100 2vmax "Roboto";
-  }
-
-  .aboutSectionContainer > div > div > span {
-    font: 100 1.4vmax "Roboto";
-    width: 70%;
-  }
-
-  .aboutSectionContainer2 {
-    border-left: none;
-  }
-
-  .aboutSectionContainer2 > h2 {
-    font: 100 3vmax "Roboto";
-    margin: 1vmax;
-  }
-
-  .aboutSectionContainer2 > a > svg {
-    font-size: 4vmax;
-    margin: 0.5vmax;
+  .aboutContainer .aboutDeatils {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    margin: 0vmax 2vmax 2vmax 2vmax;
+    border-radius: 0 0 10px 10px;
+    padding: 0vmax !important;
   }
 }
