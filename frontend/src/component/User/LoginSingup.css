@@ -69,7 +69,7 @@
 }
 .loginForm > div > input,
 .signupForm > div > input {
-  padding: 1vmax 4vmax;
+  padding: 1vmax 1vmax 1vmax 5vmax;
   padding-right: 1vmax;
   width: 100%;
   box-sizing: border-box;
@@ -83,7 +83,7 @@
 .signupForm > div > svg {
   position: absolute;
   transform: translateX(1vmax);
-  font-size: 1.6vmax;
+  font-size: 2.8vmax;
   color: #ff8800;
 }
 
@@ -184,8 +184,8 @@
 
   .loginForm > div > input,
   .signupForm > div > input {
-    padding: 2vmax 5vmax;
-    font: 300 1.7vmax "Roboto";
+    padding: 1.5vmax 1.5vmax 1.5vmax 5vmax;
+    font: 300 2vmax "Roboto";
   }
 
   .loginForm > div > svg,
@@ -203,13 +203,13 @@
   }
 
   #registerImage > input::file-selector-button {
-    height: 7vh;
+    height: 5.5vh;
     font: 400 1.8vmax "Roboto";
   }
 
   .loginBtn,
   .signupBtn {
-    font: 300 3vmax "Roboto";
+    font: 300 2.5vmax "Roboto";
     padding: 1.8vmax;
   }
 }
@@ -237,7 +237,7 @@
 
   .loginForm > div > input,
   .signupForm > div > input {
-    padding: 2.5vmax 5vmax;
+    padding: 2vmax 2vmax 2vmax 5vmax;
     font: 300 1.7vmax "Roboto";
   }
 
@@ -256,13 +256,13 @@
   }
 
   #registerImage > input::file-selector-button {
-    height: 7vh;
+    height: 5vh;
     font: 400 1.8vmax "Roboto";
   }
 
   .loginBtn,
   .signupBtn {
-    font: 300 3vmax "Roboto";
+    font: 300 2.5vmax "Roboto";
     padding: 1.8vmax;
   }
 }
