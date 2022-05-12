@@ -76,7 +76,8 @@
 }
 
 .sizeClass {
-  padding: 0 3vmax;
+  display: flex;
+  width: 40%;
   color: #5e5e5e;
 }
 
@@ -202,6 +203,12 @@
 
   .confirmCartItemsContainer > div > span {
     font: 100 4vw "Roboto";
+  }
+  .sizeClass {
+    display: block;
+    width: 15%;
+    font: 100 1.5vmax "Roboto";
+    padding: 1vmax;
   }
 
   .orderSummary {

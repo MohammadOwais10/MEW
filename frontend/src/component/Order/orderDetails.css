@@ -4,8 +4,10 @@
 
 .orderDetailsContainer > h1 {
   font: 300 3vmax "Roboto";
-  margin: 4vmax 0;
-  color: tomato;
+  margin-top: 25px;
+  padding: 1vmax 0;
+  /* margin: 4vmax 0; */
+  color: orange;
 }
 
 .orderDetailsContainer {
@@ -46,14 +48,14 @@
 
 .orderDetailsCartItems {
   padding: 2vmax 5vmax;
-  border-top: 1px solid rgba(0, 0, 0, 0.164);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.164); */
 }
 
 .orderDetailsCartItemsContainer > div {
   display: flex;
-  font: 400 1vmax "Roboto";
+  font: 400 1.3vmax "Roboto";
   align-items: center;
-  margin: 2vmax 0;
+  margin-bottom: 1vmax;
 }
 
 .orderDetailsCartItemsContainer > div > img {
@@ -65,14 +67,28 @@
   margin: 0 2vmax;
   width: 60%;
   text-decoration: none;
+  font-size: 1.5vmax;
+}
+
+.sizeClass {
+  /* padding: 0 6vmax; */
+  display: flex;
+  width: 40%;
+  color: #5e5e5e;
 }
 
 .orderDetailsCartItemsContainer > div > span {
-  font: 100 1vmax "Roboto";
+  width: 50%;
+  font: 100 1.3vmax "Roboto";
   color: #5e5e5e;
 }
 
 @media screen and (max-width: 600px) {
+  .orderDetailsContainer > h1 {
+    margin-top: 40px;
+    font: 300 2.5vmax "Roboto";
+  }
+
   .orderDetailsContainer > p {
     font: 400 6vw "Roboto";
   }
@@ -103,6 +119,13 @@
   }
 
   .orderDetailsCartItemsContainer > div > span {
-    font: 100 4vw "Roboto";
+    font: 100 1.5vmax "Roboto";
+  }
+
+  .sizeClass {
+    display: block;
+    width: 15%;
+    font: 100 1.5vmax "Roboto";
+    padding: 1vmax;
   }
 }
