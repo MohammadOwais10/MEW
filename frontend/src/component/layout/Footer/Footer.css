@@ -1,70 +1,122 @@
-footer {
+.footerContainer {
   margin-top: 32vh;
   padding: 2vh;
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background: linear-gradient(to right, #ffb347, #ffcc33);
+  color: black;
   display: flex;
   align-items: center;
 }
 
 .leftFooter {
-  width: 20%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
+
 .leftFooter > h4 {
   font-family: "Roboto";
   font-size: 2vh;
-}
-.leftFooter > p {
+  border-bottom: 2px solid black;
   text-align: center;
-  font-size: 1.5vh;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.leftFooter > img {
-  width: 15vh;
-  margin: 1vh;
-  cursor: pointer;
-  border: white;
-  border-width: 1px;
-  border-style: solid;
+
+.leftFooter > .quickLink {
+  text-decoration: none;
+  font-size: 2vh;
+  font-family: "Roboto";
+  color: black;
+  transition: all 0.5s;
+  margin: 0.5vh;
+  width: 150px;
+}
+
+.leftFooter > .quickLink:hover {
+  color: white;
 }
 
 .midFooter {
-  width: 60%;
+  width: 100%;
   text-align: center;
 }
+
 .midFooter > h1 {
-  font-size: 4vh;
+  font-size: 6vh;
   font-family: "Roboto";
-  color: #f71000;
+  color: white;
 }
+
+.midFooter > h3 {
+  font-size: 3vh;
+  font-family: "Roboto";
+  color: white;
+}
+
 .midFooter > p {
-  max-width: 60%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Roboto";
   margin: 1vh auto;
 }
 
+.midFooter > .copy {
+  font-family: "Roboto";
+  margin: 1vh auto;
+  color: white;
+}
+
 .rightFooter {
-  width: 20%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
+
 .rightFooter > h4 {
   font-family: "Roboto";
   font-size: 2vh;
-  text-decoration: underline;
+  border-bottom: 2px solid black;
+  text-align: center;
 }
+
 .rightFooter > a {
   text-decoration: none;
   font-size: 2vh;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: white;
+  font-family: "Roboto";
+  color: black;
   transition: all 0.5s;
   margin: 0.5vh;
+  width: 150px;
 }
+
 .rightFooter > a:hover {
-  color: #ff1100;
+  color: white;
+}
+
+.youtubeSvgIcon {
+  color: rgb(241, 36, 0);
+}
+
+.instagramSvgIcon {
+  color: #833ab4;
+}
+
+.facebookSvgIcon {
+  color: #0076c5;
+}
+
+.twitterSvgIcon {
+  color: #009cda;
+}
+
+@media screen and (max-width: 600px) {
+  .footerContainer {
+    display: grid;
+  }
+  .leftFooter {
+    order: 2;
+    padding: 2vmax;
+  }
+  .midFooter {
+    order: 1;
+    padding: 2vmax;
+  }
+  .rightFooter {
+    order: 3;
+    padding: 2vmax;
+  }
 }
