@@ -38,7 +38,8 @@ import UsersList from "./component/Admin/UsersList.js";
 import UpdateUser from "./component/Admin/UpdateUser.js";
 import ProductReviews from "./component/Admin/ProductReviews.js";
 import About from "./component/layout/About/About.js";
-import Contact from "./component/layout/Contact/Contact";
+import Contact from "./component/layout/Contact/Contact.js";
+import NotFound from "./component/layout/Not Found/NotFound.js";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -217,6 +218,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
