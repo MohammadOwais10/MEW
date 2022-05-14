@@ -8,7 +8,7 @@ import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 
 const OrderDetails = () => {
-  const { id } = useParams;
+  const { id } = useParams();
   const dispatch = useDispatch();
   const alert = useAlert();
   const { order, error, loading } = useSelector((state) => state.orderDetails);
