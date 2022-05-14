@@ -1,5 +1,5 @@
 .sidebar {
-  background: whitesmoke;
+  background: #e0e0e0;
   display: flex;
   flex-direction: column;
   top: 0;
@@ -55,7 +55,7 @@
 }
 
 .MuiTreeItem-label {
-  background: whitesmoke !important;
+  background: inherit !important;
 }
 
 @media screen and (max-width: 850px) {

@@ -1,10 +1,7 @@
 .banner {
-  /* background-color: aquamarine; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: 88vmin; */
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -16,16 +13,17 @@
   margin: 0.5vmax 0;
   cursor: pointer;
   background: linear-gradient(to right, #fdc830, #f37335);
-  border: 1px solid rgb(218, 166, 25);
+  border: 2px solid rgb(218, 166, 25);
   border-radius: 0;
   padding: 1vmax;
   transition: all 0.5s;
   width: 15vmax;
-  font: 600 1.3vmax "Roboto";
+  font: 500 1.3vmax "Roboto";
   color: white;
 }
+
 .banner > a > button:hover {
-  background: lightgray;
+  background: black;
   color: white;
 }
 
@@ -34,6 +32,7 @@
   width: 100%;
   border-radius: 10px;
 }
+
 .homeHeading {
   text-align: center;
   font-family: Roboto;

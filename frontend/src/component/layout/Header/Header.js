@@ -179,16 +179,18 @@ export default function Header() {
   };
 
   const femmecubatorLogo = (
-    <Typography className={logo}>
-      <img
-        style={{
-          height: 80,
-          width: 150,
-        }}
-        src={mewLogo2}
-        alt="Logo"
-      />
-    </Typography>
+    <Link href="/">
+      <Typography className={logo}>
+        <img
+          style={{
+            height: 80,
+            width: 150,
+          }}
+          src={mewLogo2}
+          alt="Logo"
+        />
+      </Typography>
+    </Link>
   );
 
   const getMenuButtons = () => {
