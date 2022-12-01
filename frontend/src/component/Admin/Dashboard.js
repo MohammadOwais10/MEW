@@ -69,7 +69,7 @@ const Dashboard = () => {
         <div className="dashboardSummary">
           <div>
             <p>
-              Total Amount <br /> ₹{totalAmount}
+              Total Amount <br /> ₹{totalAmount?.toFixed(2)}
             </p>
           </div>
           <div className="dashboardSummaryBox2">

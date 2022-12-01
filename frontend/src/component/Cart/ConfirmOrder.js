@@ -95,7 +95,7 @@ const ConfirmOrder = () => {
               </div>
               <div>
                 <p>GST:</p>
-                <span>₹{tax}</span>
+                <span>₹{tax?.toFixed(2)}</span>
               </div>
             </div>
 

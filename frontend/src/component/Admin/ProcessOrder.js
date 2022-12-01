@@ -112,7 +112,10 @@ const ProcessOrder = () => {
 
                     <div>
                       <p>Amount:</p>
-                      <span>{order.totalPrice && order.totalPrice}</span>
+                      <span>
+                        {order.totalPrice?.toFixed(2) &&
+                          order.totalPrice?.toFixed(2)}
+                      </span>
                     </div>
                   </div>
 
