@@ -42,7 +42,7 @@ const LoginSignup = () => {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      alert.info(error);
       dispatch(clearErrors());
     }
     if (isAuthenticated) {
