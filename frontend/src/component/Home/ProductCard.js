@@ -16,9 +16,6 @@ const ProductCard = ({ product }) => {
       <span>{`\u20B9${product.price}`}</span>
       <div>
         <Rating id="rating" {...options} />{" "}
-        <span className="productCardSpan">
-          ({product.numOfReviews} Reviews)
-        </span>
       </div>
     </Link>
   );
