@@ -19,6 +19,7 @@ import UpdatePassword from "./component/User/UpdatePassword.js";
 import ForgotPassword from "./component/User/ForgotPassword.js";
 import ResetPassword from "./component/User/ResetPassword.js";
 import Cart from "./component/Cart/Cart.js";
+import Wishlist from "./component/Cart/Wishlist.js";
 import Shipping from "./component/Cart/Shipping.js";
 import ConfirmOrder from "./component/Cart/ConfirmOrder.js";
 import axios from "axios";
@@ -88,6 +89,10 @@ function App() {
         <Route path="/password/forgot" element={<ForgotPassword />} />
         <Route path="/password/reset/:token" element={<ResetPassword />} />
         <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/wishlist"
+          element={isAuthenticated ? <Wishlist /> : <LoginSignup />}
+        />
         <Route
           path="/shipping"
           element={isAuthenticated ? <Shipping /> : <LoginSignup />}

@@ -19,6 +19,11 @@ import {
 } from "./reducers/userReducer";
 import { cartReducer } from "./reducers/cartReducer";
 import {
+  create_wishlist_reducer,
+  delete_wish_reducer,
+  get_wishlist_reducer,
+} from "./reducers/wishlistReducer";
+import {
   allOrdersReducer,
   myOrdersReducer,
   newOrderReducer,
@@ -33,6 +38,9 @@ const reducer = combineReducers({
   profile: profileReducer,
   forgotPassword: forgotPasswordReducer,
   cart: cartReducer,
+  wishlist: create_wishlist_reducer,
+  wishlist_data: get_wishlist_reducer,
+  deletewish: delete_wish_reducer,
   newOrder: newOrderReducer,
   myOrders: myOrdersReducer,
   orderDetails: orderDetailsReducer,
