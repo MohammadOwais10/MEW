@@ -6,6 +6,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import Backdrop from "@material-ui/core/Backdrop";
 import { useNavigate } from "react-router-dom";
 import { useAlert } from "react-alert";
@@ -31,6 +32,11 @@ const UserOptions = ({ user }) => {
       name: `Cart(${cartItems.length})`,
       func: cart,
     },
+    {
+      icon: <FavoriteIcon />,
+      name: "Whislist",
+      func: wishlistss,
+    },
     { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
   ];
 
@@ -55,7 +61,9 @@ const UserOptions = ({ user }) => {
   function cart() {
     navigate("/cart");
   }
-
+  function wishlistss() {
+    navigate("/wishlist");
+  }
   function logoutUser() {
     dispatch(logout());
     alert.success("Logout Successfully");
