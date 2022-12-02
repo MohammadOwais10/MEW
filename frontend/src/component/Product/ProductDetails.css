@@ -129,6 +129,24 @@
   background: linear-gradient(to right, #ffb75e, #fffb0a);
 }
 
+.wishlistButton {
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+  background: linear-gradient(to right, hsl(347, 95%, 49%), #ff2020);
+  font: 500 1.8vmax "Roboto";
+  border-radius: 10px;
+  padding: 0.8vmax 1.5vmax;
+  margin-top: 1vmax;
+  outline: none;
+  margin: 0 10px;
+}
+
+.wishlistButton:hover {
+  background: black;
+}
+
 .detailsBlock-3 > p {
   border-top: 1px solid rgba(0, 0, 0, 0.205);
   border-bottom: 1px solid rgba(0, 0, 0, 0.205);
@@ -303,6 +321,12 @@
     padding: 1vmax 0;
     text-align: center;
     font: 400 2vmax "Roboto";
+  }
+
+  .wishlistButton {
+    font: 500 2vmax "Roboto";
+    padding: 1.5vmax;
+    margin-top: 1vmax;
   }
 
   .detailsBlock-4 {

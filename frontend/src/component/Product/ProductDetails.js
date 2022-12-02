@@ -13,6 +13,8 @@ import ReviewCard from "./ReviewCard";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import { addItemsToCart } from "../../actions/cartAction";
+import { createwishlist } from "../../actions/wishlistAction";
+
 import {
   Dialog,
   DialogActions,
@@ -28,6 +30,8 @@ const ProductDetails = () => {
   const alert = useAlert();
   const sizes = ["S", "M", "L"];
   const [size, setSize] = useState("S");
+  const { error: werror } = useSelector((state) => state.wishlist);
+  const param = useParams();
 
   const { product, loading, error } = useSelector(
     (state) => state.productDetails
@@ -97,6 +101,27 @@ const ProductDetails = () => {
     setOpen(false);
   };
 
+  const {
+    loading: userloading,
+    user,
+    isAuthenticated,
+  } = useSelector((state) => state.user);
+
+  const addtowishlist = () => {
+    if (user) {
+      const option = {
+        user: user._id,
+        orderItems: [{ product: param.id }],
+      };
+      console.log(option);
+      dispatch(createwishlist(option));
+
+      alert.success("Product added successfully in wishlist");
+    } else {
+      alert.show("Login to add Product into Wishlist");
+    }
+  };
+
   return (
     <Fragment>
       {loading ? (
@@ -157,6 +182,10 @@ const ProductDetails = () => {
                   onClick={addToCartHandler}
                 >
                   Add to Cart
+                </button>
+
+                <button className="wishlistButton" onClick={addtowishlist}>
+                  WISHLIST
                 </button>
 
                 <p>

@@ -1,0 +1,208 @@
+.whishlistPage {
+  margin: 100px 2.5vmax 2.5vmax 2.5vmax;
+  border-radius: 3px;
+  background: linear-gradient(to right, #232526, #414345);
+  padding: 10px;
+}
+
+.wishlistTitle {
+  background: lightgrey;
+  color: rgb(36, 32, 31);
+  text-align: center;
+  margin: 10px;
+  font: 500 22px "Roboto";
+  border-radius: 10px;
+}
+
+.whishlistHeader {
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+  box-sizing: border-box;
+  margin: 10px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font: 300 0.7vmax "Roboto";
+  border-radius: 3px;
+}
+
+.whishlistHeader > p {
+  margin: 10px;
+  font-size: 2vmax;
+}
+
+.whishlistHeader > p:last-child {
+  text-align: center;
+  margin-right: 0;
+}
+
+.whishlistContainer {
+  background: #eef2f3;
+  margin: 10px;
+  border-radius: 3px;
+}
+
+.whishlistItemCard {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.whishlistItemCard > img {
+  height: 10vmax;
+  width: 8vmax;
+  border-radius: 3px;
+}
+
+.whishlistItemCard > div {
+  display: flex;
+  margin: 0.3vmax 1vmax;
+  flex-direction: column;
+}
+
+.whishlistItemCard > div > a {
+  font: 500 1.8vmax "Roboto";
+  color: #f7b733;
+  text-decoration: none;
+}
+
+.whishlistItemCard > div > span {
+  font: 500 1.5vmax "Roboto";
+  color: rgba(68, 68, 68, 0.815);
+}
+
+.whishlistItemCard > div > button {
+  color: red;
+  font: 600 1.6vmax "Roboto";
+  cursor: pointer;
+  background: #eef2f3;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(48, 48, 48);
+  padding: 5px;
+  border: none;
+}
+
+.wishlistAddMore {
+  text-align: center;
+  margin: 10px;
+  padding: 20px 0 10px 0;
+}
+
+.wishlistAddMore > a {
+  text-decoration: none;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(253, 242, 242, 0.27);
+  background-image: linear-gradient(
+    to right,
+    #ff8008 0%,
+    #ffc837 51%,
+    #ff8008 100%
+  );
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 5px #eee;
+}
+
+.wishlistAddMore > a:hover {
+  background-position: right center;
+}
+
+.wishlistEmpty {
+  margin: auto;
+  text-align: center;
+  padding: 10vmax;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlistEmpty > svg {
+  font-size: 8vmax;
+  color: red;
+}
+
+.wishlistEmpty > p {
+  font-size: 2vmax;
+}
+
+.wishlistEmpty > a {
+  background-image: linear-gradient(
+    to right,
+    #ff8008 0%,
+    #ffc837 51%,
+    #ff8008 100%
+  );
+  background-size: 200% auto;
+  color: white;
+  border: none;
+  padding: 1vmax 3vmax;
+  cursor: pointer;
+  font: 500 2vmax "Roboto";
+  text-decoration: none;
+  margin: 2vmax;
+}
+
+.wishlistEmpty > a:hover {
+  background-position: right center;
+}
+
+@media screen and (max-width: 600px) {
+  .whishlistPage {
+    margin: 95px 1vmax 1vmax 1vmax;
+    min-height: 60vh;
+  }
+
+  .wishlistTitle {
+    font-size: 2.3vmax;
+  }
+
+  .whishlistHeader {
+    font: 500 1.8vmax "Roboto";
+  }
+
+  .whishlistHeader > p:last-child {
+    justify-content: center;
+    margin-right: 1vmax;
+  }
+
+  .whishlistItemCard > img {
+    height: 18vmax;
+    width: 11vmax;
+  }
+
+  .whishlistItemCard > div {
+    width: 8vmax;
+    margin: 1vmax 1.5vmax;
+  }
+
+  .whishlistItemCard > div > a {
+    font: 300 2vmax "Roboto";
+  }
+
+  .whishlistItemCard > div > span {
+    font: 300 1.9vmax "Roboto";
+  }
+
+  .whishlistItemCard > div > button {
+    font: 100 1.8vmax "Roboto";
+  }
+
+  .wishlistEmpty > a {
+    padding: 3vw 6vw;
+    font: 400 4vw "Roboto";
+    margin: 2vmax;
+  }
+
+  .wishlistEmpty > svg {
+    font-size: 20vw;
+  }
+  .wishlistEmpty > p {
+    margin: 2vmax;
+    font-size: 5vw;
+  }
+}
