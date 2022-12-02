@@ -11,6 +11,8 @@ import Typography from "@material-ui/core/Typography";
 import { useAlert } from "react-alert";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
+import { Button } from "@material-ui/core";
+import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
 const categories = [
   "Kurta",
@@ -57,6 +59,12 @@ const Products = () => {
     }
     dispatch(getProduct(keyword, currentPage, price, category, ratings));
   }, [dispatch, keyword, currentPage, price, category, ratings, alert, error]);
+
+  const resetFilters = () => {
+    setCategory("");
+    setRatings(0);
+    setPrice([0, 99999]);
+  };
 
   const [showMediaIcons, setShowMediaIcons] = useState(false);
 
@@ -126,6 +134,13 @@ const Products = () => {
                 max={5}
               />
             </fieldset>
+
+            <Typography>
+              <Button onClick={resetFilters}>
+                <RestartAltIcon />
+                Reset
+              </Button>
+            </Typography>
           </div>
 
           {resultPerPage < count && (
