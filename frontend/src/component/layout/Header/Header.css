@@ -10,6 +10,10 @@
   border-radius: 100%;
 }
 
+.MuiDrawer-paper {
+  background: linear-gradient(to bottom, rgb(255, 210, 0), #fe8c00) !important;
+}
+
 @media screen and (max-width: 600px) {
   .speedDial {
     position: fixed;
@@ -23,5 +27,11 @@
     width: 56px;
     height: 45px;
     border-radius: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .MuiToolbar-gutters {
+    padding-right: 10px !important;
   }
 }
