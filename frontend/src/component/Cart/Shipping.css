@@ -4,25 +4,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  background-color: white;
+  top: 0%;
+  left: 0;
+  overflow: hidden;
 }
 
 .shippingBox {
-  background-color: white;
-  width: 25vw;
-  height: 90vh;
+  background-color: whitesmoke;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 2%;
+  box-shadow: 0 0 10px rgb(0 0 0 / 27%);
+  padding: 2vmax;
+  margin: 10px;
 }
 
 .shippingHeading {
   text-align: center;
   color: black;
-  font: 500 1.5vmax "Roboto";
-  padding: 0.5vmax;
+  font: 600 2vmax "Roboto";
+  padding: 10px;
   border-bottom: 2px solid orange;
-  width: 60%;
+  border-width: medium;
   margin: auto;
+  border-radius: 3px;
+  margin-bottom: 10px;
 }
 
 .shippingForm {
@@ -30,7 +37,6 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  /* padding: 2vmax; */
   justify-content: space-evenly;
   height: 80%;
   transition: all 0.5s;
@@ -40,6 +46,7 @@
   display: flex;
   width: 100%;
   align-items: center;
+  margin: 10px;
 }
 
 .shippingForm > div > input,
@@ -82,22 +89,17 @@
 
 @media screen and (max-width: 600px) {
   .shippingBox {
-    width: 100vw;
-    height: 88vh;
+    margin: 15px;
   }
 
   .shippingHeading {
-    font: 400 6vw "Roboto";
+    font: 600 6vw "Roboto";
     padding: 1vmax;
-  }
-
-  .shippingForm {
-    padding: 1vmax 5vmax;
   }
 
   .shippingForm > div > input,
   .shippingForm > div > select {
-    padding: 4vw 10vw;
+    padding: 3vw 10vw;
     font: 300 4vw "Roboto";
   }
 
@@ -107,7 +109,7 @@
   }
 
   .shippingBtn {
-    font: 300 4vw "Roboto";
-    padding: 4vw;
+    font: 300 25px "Roboto";
+    padding: 2vw;
   }
 }

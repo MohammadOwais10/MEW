@@ -2,9 +2,10 @@ import React, { Fragment, useEffect, useRef } from "react";
 import CheckoutSteps from "../Cart/CheckoutSteps";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { Typography } from "@material-ui/core";
+import { Typography, IconButton } from "@material-ui/core";
 import { useAlert } from "react-alert";
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import PaymentsIcon from "@mui/icons-material/Payments";
+
 import {
   CardNumberElement,
   CardCvcElement,
@@ -112,31 +113,39 @@ const Payment = () => {
     <Fragment>
       <CheckoutSteps activeStep={2} />
       <div className="paymentContainer">
-        <form className="paymentForm" onSubmit={(e) => submitHandler(e)}>
-          <Typography>
-            <AccountBalanceIcon />
-            Card Info
-          </Typography>
-          <div>
-            <CreditCardIcon />
-            <CardNumberElement className="paymentInput" />
-          </div>
-          <div>
-            <EventIcon />
-            <CardExpiryElement className="paymentInput" />
-          </div>
-          <div>
-            <VpnKeyIcon />
-            <CardCvcElement className="paymentInput" />
-          </div>
+        <div className="paymentBox">
+          <h1 className="paymentHeading">
+            <IconButton>
+              <PaymentsIcon color="success" sx={{ fontSize: 40 }} />
+            </IconButton>
+            Payment Card
+          </h1>
 
-          <input
-            type="submit"
-            value={`Pay - ₹${orderInfo && orderInfo.totalPrice}`}
-            ref={payBtn}
-            className="paymentFormBtn"
-          />
-        </form>
+          <form className="paymentForm" onSubmit={(e) => submitHandler(e)}>
+            <div>
+              <CreditCardIcon />
+              <CardNumberElement
+                className="paymentInput"
+                defaultValue="Default Value"
+              />
+            </div>
+            <div>
+              <EventIcon />
+              <CardExpiryElement className="paymentInput" />
+            </div>
+            <div>
+              <VpnKeyIcon />
+              <CardCvcElement className="paymentInput" type="password" />
+            </div>
+
+            <input
+              type="submit"
+              value={`Pay - ₹${orderInfo && orderInfo.totalPrice?.toFixed(2)}`}
+              ref={payBtn}
+              className="paymentFormBtn"
+            />
+          </form>
+        </div>
       </div>
     </Fragment>
   );

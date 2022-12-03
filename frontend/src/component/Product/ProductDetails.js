@@ -14,6 +14,7 @@ import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import { addItemsToCart } from "../../actions/cartAction";
 import { createwishlist } from "../../actions/wishlistAction";
+import { loadUser } from "../../actions/userAction";
 
 import {
   Dialog,
@@ -151,10 +152,10 @@ const ProductDetails = () => {
               <div className="detailsBlock-2">
                 <Rating id="rating" {...options} />
                 <span className="detailsBlock-2-span">
-                  {" "}
                   ({product.numOfReviews} Reviews)
                 </span>
               </div>
+
               <div className="detailsBlock-3">
                 <h1>{`₹${product.price}`}</h1>
                 <div className="detailsBlock-3-1">
@@ -187,14 +188,14 @@ const ProductDetails = () => {
                 <button className="wishlistButton" onClick={addtowishlist}>
                   WISHLIST
                 </button>
-
-                <p>
-                  Status:
-                  <b className={product.stock < 1 ? "redColor" : "greenColor"}>
-                    {product.stock < 1 ? "OutOfStock" : "InStock"}
-                  </b>
-                </p>
               </div>
+
+              <p className="stockStatus">
+                Status:
+                <b className={product.stock < 1 ? "redColor" : "greenColor"}>
+                  {product.stock < 1 ? "OutOfStock" : "InStock"}
+                </b>
+              </p>
 
               <div className="detailsBlock-4">
                 Description : <p>{product.description}</p>

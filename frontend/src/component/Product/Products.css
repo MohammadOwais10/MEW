@@ -8,7 +8,8 @@
   padding: 0 5vmax;
   justify-content: center;
   min-height: 30vh;
-  margin: 8vmax 0 0 8vmax;
+  margin: 8vmax 0 0 13vmax;
+  overflow: hidden !important;
 }
 
 .paginationBox {
@@ -24,9 +25,9 @@
 }
 
 .page-item {
-  background-color: rgb(255, 255, 255);
+  background-color: whitesmoke;
   list-style: none;
-  border: 1px solid rgba(0, 0, 0, 0.178);
+  border: 2px solid lightgrey;
   padding: 1vmax 1.5vmax;
   transition: all 0.3s;
   cursor: pointer;
@@ -63,12 +64,14 @@
 }
 
 .filterBox {
-  width: 10vmax;
-  position: fixed;
+  width: 15vmax;
+  position: absolute;
   top: 10vmax;
-  left: 4vmax;
-  border: 2px solid rgb(105, 105, 105);
+  left: 3vmax;
   padding: 10px;
+  border-radius: 5px;
+  background: whitesmoke;
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
 }
 
 .categoryBox {
@@ -124,12 +127,14 @@
 
   .mobile-filterBox {
     display: block;
-    padding: 2vmax;
-    width: 85%;
+    padding: 15px;
+    width: 55%;
     position: absolute;
     top: 18vmax;
-    background-color: #f7b733;
+    background: #eef2f3;
     margin: 2vmax;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
   }
 
   .products {
@@ -142,15 +147,36 @@
     top: 15vmax;
     left: 2vmax;
   }
-  .page-link {
-    font: 300 1.7vmax "Roboto";
+
+  .categoryBox {
+    padding: 2px 0;
   }
+
+  .page-link {
+    font: 300 2vmax "Roboto";
+  }
+
   .category-link {
-    font: 400 1.8vmax "Roboto";
+    font: 400 2vmax "Roboto";
   }
 
   .category-link:hover {
     color: white;
     font-size: 2vmax;
+  }
+
+  .mobile-filterBox > fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1380px) {
+  .products {
+    margin-top: 80px;
+  }
+  .filterBox {
+    top: 120px;
   }
 }

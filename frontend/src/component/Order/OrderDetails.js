@@ -31,10 +31,11 @@ const OrderDetails = () => {
           <div className="orderDetailsPage">
             <div className="orderDetailsContainer">
               <Typography component="h1">
-                Order #{order && order._id}
+                Order Id: #{order && order._id}
               </Typography>
-              <Typography>Shipping Info</Typography>
+
               <div className="orderDetailsContainerBox">
+                <Typography>Shipping Info</Typography>
                 <div>
                   <p>Name:</p>
                   <span>{order.user && order.user.name}</span>
@@ -53,10 +54,12 @@ const OrderDetails = () => {
                   </span>
                 </div>
               </div>
-              <Typography>Payment</Typography>
+
               <div className="orderDetailsContainerBox">
+                <Typography>Payment</Typography>
                 <div>
-                  <p
+                  <p>Status:</p>
+                  <span
                     className={
                       order.paymentInfo &&
                       order.paymentInfo.status === "succeeded"
@@ -68,7 +71,7 @@ const OrderDetails = () => {
                     order.paymentInfo.status === "succeeded"
                       ? "PAID"
                       : "NOT PAID"}
-                  </p>
+                  </span>
                 </div>
 
                 <div>
@@ -80,10 +83,11 @@ const OrderDetails = () => {
                 </div>
               </div>
 
-              <Typography>Order Status</Typography>
               <div className="orderDetailsContainerBox">
+                <Typography>Order Status</Typography>
                 <div>
-                  <p
+                  <p>Status:</p>
+                  <span
                     className={
                       order.orderStatus && order.orderStatus === "Delivered"
                         ? "greenColor"
@@ -91,22 +95,24 @@ const OrderDetails = () => {
                     }
                   >
                     {order.orderStatus && order.orderStatus}
-                  </p>
+                  </span>
                 </div>
               </div>
             </div>
 
             <div className="orderDetailsCartItems">
-              <Typography>Order Items:</Typography>
               <div className="orderDetailsCartItemsContainer">
+                <Typography>Order Items</Typography>
                 {order.orderItems &&
                   order.orderItems.map((item) => (
                     <div key={item.product}>
                       <img src={item.image} alt="Product" />
                       <Link to={`/product/${item.product}`}>{item.name}</Link>
                       <div className="sizeClass">
-                        <p>Size:</p>
-                        <b>{` ${item.size}`}</b>
+                        <span>
+                          Size:
+                          <b>{` ${item.size}`}</b>
+                        </span>
                       </div>
                       <span>
                         {item.quantity} X ₹{item.price} ={" "}

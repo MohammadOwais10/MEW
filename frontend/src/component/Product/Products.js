@@ -9,8 +9,8 @@ import Pagination from "react-js-pagination";
 import Slider from "@material-ui/core/Slider";
 import Typography from "@material-ui/core/Typography";
 import { useAlert } from "react-alert";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
-import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
+import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
+import SettingsInputComponentIcon from '@mui/icons-material/SettingsInputComponent';
 import { Button } from "@material-ui/core";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
@@ -29,7 +29,7 @@ const Products = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([0, 99999]);
+  const [price, setPrice] = useState([0, 50000]);
   const [category, setCategory] = useState("");
   const [ratings, setRatings] = useState(0);
 
@@ -63,7 +63,7 @@ const Products = () => {
   const resetFilters = () => {
     setCategory("");
     setRatings(0);
-    setPrice([0, 99999]);
+    setPrice([0, 50000]);
   };
 
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -104,8 +104,10 @@ const Products = () => {
               onChange={priceHandler}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
+              marks
+              step={5000}
               min={0}
-              max={99999}
+              max={50000}
             />
 
             <Typography>Categories</Typography>
@@ -128,8 +130,10 @@ const Products = () => {
                 onChange={(e, newRating) => {
                   setRatings(newRating);
                 }}
-                aria-labelledby="continuous-slider"
+                aria-label="Small steps"
                 valueLabelDisplay="auto"
+                marks
+                step={1}
                 min={0}
                 max={5}
               />

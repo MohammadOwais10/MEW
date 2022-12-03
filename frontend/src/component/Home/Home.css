@@ -66,10 +66,10 @@
 
 .productCard > img {
   width: 14vmax;
+  border-radius: 5px;
 }
 
 .productCard > div {
-  margin-top: -0.8vmax;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -101,7 +101,6 @@
 
 .productCard:hover {
   box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
-
   transform: translateY(-1vmax);
 }
 

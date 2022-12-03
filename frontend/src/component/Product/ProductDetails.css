@@ -1,8 +1,6 @@
 .ProductDetails {
-  background-color: rgb(255, 255, 255);
-  width: 100vw;
   max-width: 100%;
-  padding: 6vmax;
+  margin: 83px 6vmax 2vmax 6vmax;
   box-sizing: border-box;
   display: flex;
 }
@@ -13,9 +11,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2vmax;
   box-sizing: border-box;
-  border: 1px solid white;
 }
 
 .ProductDetails > div:last-child {
@@ -23,7 +19,9 @@
 }
 
 .CarouselImage {
-  width: 20vmax;
+  width: 25vmax;
+  height: 32vmax;
+  border-radius: 3px;
 }
 
 .detailsBlock-1 > h2 {
@@ -34,17 +32,17 @@
 
 .detailsBlock-1 > p {
   color: rgba(54, 54, 54, 0.582);
-  font: 200 0.8vmax cursive;
+  font: 200 1vmax cursive;
 }
 
 .detailsBlock-2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.205);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  border-top: 2px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.205);
   width: 70%;
-  padding: 1vmax 0;
+  padding: 0.5vmax 0;
 }
 
 .detailsBlock-2-span {
@@ -52,15 +50,16 @@
   color: rgba(0, 0, 0, 0.699);
 }
 
-.detailsBlock-3 {
+/* .detailsBlock-3 {
   width: 70%;
-}
+} */
 
 .detailsBlock-3 > h1 {
   color: rgba(17, 17, 17, 0.795);
   font: 400 1.8vmax "Franklin Gothic Medium";
   margin: 1vmax 0;
 }
+
 .detailsBlock-3-1 {
   display: flex;
   align-items: center;
@@ -112,7 +111,7 @@
 }
 
 .addCartButton {
-  width: 16vmax;
+  /* width: 16vmax; */
   border: none;
   cursor: pointer;
   color: white;
@@ -147,9 +146,10 @@
   background: black;
 }
 
-.detailsBlock-3 > p {
-  border-top: 1px solid rgba(0, 0, 0, 0.205);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+.stockStatus {
+  width: 70%;
+  border-top: 2px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.205);
   padding: 1vmax 0;
   color: rgba(0, 0, 0, 0.651);
   font: 400 1.3vmax "Roboto";
@@ -159,6 +159,7 @@
 .detailsBlock-4 {
   color: rgba(0, 0, 0, 0.897);
   font: 500 1.4vmax sans-serif;
+  width: 70%;
 }
 
 .detailsBlock-4 > p {
@@ -178,6 +179,7 @@
   transition: all 0.5s;
   outline: none;
 }
+
 .submitReview:hover {
   background: gray;
   transform: scale(1.1);
@@ -187,6 +189,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .submitDialogTextArea {
   border: 1px solid rgba(0, 0, 0, 0.082);
   margin: 1vmax 0;
@@ -205,16 +208,19 @@
   margin: auto;
   margin-bottom: 4vmax;
 }
+
 .reviews {
   display: flex;
-  overflow: auto;
+  overflow: hidden;
+  flex-wrap:wrap ;
+  justify-content: space-evenly;
 }
 
 .reviewCard {
   flex: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
   border: 1px solid rgba(56, 56, 56, 0.116);
-  width: 30vmax;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,7 +254,7 @@
   .ProductDetails {
     flex-direction: column;
     height: unset;
-    margin-top: 5vmax;
+    margin: 90px 1vmax 1vmax 1vmax;
   }
 
   .ProductDetails > div:last-child {
@@ -272,7 +278,7 @@
 
   .detailsBlock-2 {
     justify-content: center;
-    width: 90%;
+    /* width: 90%; */
   }
 
   .detailsBlock-2 > span {
@@ -293,7 +299,7 @@
   }
 
   .detailsBlock-3-1 {
-    flex-direction: column;
+    justify-content: center;
   }
 
   .detailsBlock-3-1-1 {
@@ -310,23 +316,26 @@
     font: 400 1.8vmax "Roboto";
   }
 
-  .addCartButton {
-    font: 500 1.7vmax "Roboto";
-    padding: 1.5vmax;
-    width: 20vmax;
-    margin-top: 1vmax;
+  .sizeBlock > select {
+    font-size: 2vmax;
   }
 
-  .detailsBlock-3 > p {
-    padding: 1vmax 0;
-    text-align: center;
-    font: 400 2vmax "Roboto";
+  .addCartButton {
+    font: 500 2vmax "Roboto";
+    padding: 1.5vmax;
+    margin-top: 1vmax;
   }
 
   .wishlistButton {
     font: 500 2vmax "Roboto";
     padding: 1.5vmax;
     margin-top: 1vmax;
+  }
+
+  .stockStatus {
+    padding: 1vmax 0;
+    text-align: center;
+    font: 400 2vmax "Roboto";
   }
 
   .detailsBlock-4 {

@@ -1,8 +1,97 @@
+.processOrderPage {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 4fr 3.5fr;
+  overflow: hidden;
+}
+
+.processOrderHeader {
+  font: 600 2.2vmax "Roboto";
+  background-color: whitesmoke;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 2vmax;
+}
+
+.processOrderContainerBox,
+.processOrderCartItems {
+  background: linear-gradient(to right, #232526, #414345);
+  /* background: #eef2f3; */
+  margin: 2vmax;
+  padding-bottom: 0%;
+  padding: 2vmax;
+  border-radius: 3px;
+}
+
+.processOrderContainerBox > p,
+.processOrderCartItems > p {
+  font: 500 2vmax "Roboto";
+  background-color: rgb(255, 234, 113) !important;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.processOrderContainerBox > div {
+  display: flex;
+  margin: 1vmax 0;
+}
+
+.processOrderContainerBox > div > p {
+  font: 500 1.5vmax "Roboto";
+  color: white;
+}
+.processOrderContainerBox > div > span {
+  margin: 0 1vmax;
+  font: 100 1.5vmax "Roboto";
+  color: lightgray;
+}
+
+.processOrderCartItemsContainer > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr 2fr;
+  font: 400 1.3vmax "Roboto";
+  align-items: center;
+  margin-top: 1vmax;
+  background: whitesmoke;
+  border-radius: 5px;
+}
+
+.processOrderCartItemsContainer > div > img {
+  width: 4vmax;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.processOrderCartItemsContainer > div > a {
+  color: black;
+  font-size: 1.6vmax;
+  margin: 0 2vmax;
+  width: 60%;
+  text-decoration: none;
+}
+
+.processOrderSizeClass {
+  font: 100 1.5vmax "Roboto";
+}
+
+.processOrderCartItemsContainer > div > span {
+  font: 100 1.3vmax "Roboto";
+  color: rgb(51, 51, 51);
+}
+
 .updateOrderForm {
   margin: 5vmax 2vmax;
   padding: 3vmax;
-  background-color: whitesmoke;
+  background: linear-gradient(to right, #232526, #414345);
   border-radius: 5px;
+}
+
+.updateOrderForm > h1 {
+  text-align: center;
+  background-color: whitesmoke;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.267);
+  padding: 1vmax;
 }
 
 .updateOrderForm > div {
@@ -30,21 +119,62 @@
 }
 
 @media screen and (max-width: 600px) {
+  .processOrderHeader {
+    font: 600 2.5vmax "Roboto";
+  }
+
+  .processOrderPage {
+    grid-template-columns: 1fr;
+    height: unset;
+  }
+
+  .processOrderContainerBox > p,
+  .processOrderCartItems > p {
+    font: 500 2.5vmax "Roboto";
+  }
+
+  .processOrderCartItemsContainer > div {
+    font: 400 4vw "Roboto";
+    margin-bottom: 2vw;
+    justify-content: unset;
+  }
+
+  .processOrderCartItemsContainer > div > img {
+    width: 10vw;
+  }
+
+  .processOrderCartItemsContainer > div > a {
+    font-size: 2vmax;
+    margin: 0;
+    width: 30%;
+  }
+
+  .processOrderCartItemsContainer > div > span {
+    font: 300 2vmax "Roboto";
+    margin-right: 2px;
+  }
+
   .updateOrderForm {
     padding: 5vmax;
   }
 
   .updateOrderForm > div > select {
-    padding: 2.5vmax 5vmax;
-    font: 300 1.7vmax "Roboto";
+    padding: 2vmax 5vmax;
+    font: 500 2.5vmax "Roboto";
   }
 
   .updateOrderForm > div > svg {
     font-size: 2.8vmax;
   }
 
-  .specialHeader {
-    font: 400 6vw "Roboto";
-    text-align: center !important;
+  .processOrderSizeClass {
+    font: 300 1.8vmax "Roboto";
+    width: 55;
+  }
+  .processOrderContainerBox > div > p {
+    font: 400 4vw "Roboto";
+  }
+  .processOrderContainerBox > div > span {
+    font: 100 4vw "Roboto";
   }
 }

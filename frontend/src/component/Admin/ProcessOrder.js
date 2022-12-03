@@ -57,22 +57,25 @@ const ProcessOrder = () => {
     <Fragment>
       <div className="dashboard">
         <SideBar />
-        <div className="newProductContainer">
+        <div className="processOrderContainer">
           {loading ? (
             <Loader />
           ) : (
             <div
-              className="confirmOrderPage"
+              className="processOrderPage"
               style={{
                 display: order.orderStatus === "Delivered" ? "block" : "grid",
               }}
             >
               <div>
-                <div className="confirmshippingArea">
-                  <Typography className="specialHeader">
-                    Shipping Info
-                  </Typography>
-                  <div className="orderDetailsContainerBox">
+                <h1 className="processOrderHeader">
+                  <AccountTreeIcon /> Order Processing System
+                </h1>
+                <div className="processOrderArea">
+                  <div className="processOrderContainerBox">
+                    <Typography className="specialHeader">
+                      Shipping Info
+                    </Typography>
                     <div>
                       <p>Name:</p>
                       <span>{order.user && order.user.name}</span>
@@ -92,10 +95,11 @@ const ProcessOrder = () => {
                     </div>
                   </div>
 
-                  <Typography>Payment</Typography>
-                  <div className="orderDetailsContainerBox">
+                  <div className="processOrderContainerBox">
+                    <Typography>Payment</Typography>
                     <div>
-                      <p
+                      <p>Status: </p>
+                      <span
                         className={
                           order.paymentInfo &&
                           order.paymentInfo.status === "succeeded"
@@ -107,7 +111,7 @@ const ProcessOrder = () => {
                         order.paymentInfo.status === "succeeded"
                           ? "PAID"
                           : "NOT PAID"}
-                      </p>
+                      </span>
                     </div>
 
                     <div>
@@ -119,10 +123,11 @@ const ProcessOrder = () => {
                     </div>
                   </div>
 
-                  <Typography>Order Status</Typography>
-                  <div className="orderDetailsContainerBox">
+                  <div className="processOrderContainerBox">
+                    <Typography>Order Status</Typography>
                     <div>
-                      <p
+                      <p>Status: </p>
+                      <span
                         className={
                           order.orderStatus && order.orderStatus === "Delivered"
                             ? "greenColor"
@@ -130,13 +135,13 @@ const ProcessOrder = () => {
                         }
                       >
                         {order.orderStatus && order.orderStatus}
-                      </p>
+                      </span>
                     </div>
                   </div>
                 </div>
-                <div className="confirmCartItems">
-                  <Typography>Your Cart Items:</Typography>
-                  <div className="confirmCartItemsContainer">
+                <div className="processOrderCartItems">
+                  <Typography>Your Cart Items</Typography>
+                  <div className="processOrderCartItemsContainer">
                     {order.orderItems &&
                       order.orderItems.map((item) => (
                         <div key={item.product}>
@@ -144,9 +149,11 @@ const ProcessOrder = () => {
                           <Link to={`/product/${item.product}`}>
                             {item.name}
                           </Link>{" "}
-                          <div className="sizeClass">
-                            <p>Size:</p>
-                            <b>{` ${item.size}`}</b>
+                          <div className="processOrderSizeClass">
+                            <span>
+                              Size:
+                              <b>{` ${item.size}`}</b>
+                            </span>
                           </div>
                           <span>
                             {item.quantity} X ₹{item.price} ={" "}

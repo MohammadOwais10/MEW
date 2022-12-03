@@ -5,63 +5,61 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right, #f7971e, #ffd200);
-  margin: 0 10vmax;
-  margin-top: 150px;
-  border-radius: 5px;
-  padding: 5vmax;
+  margin: 0 15vmax;
+  margin-top: 120px;
+  padding: 2vmax;
+  border-radius: 10px;
 }
 
-.emailBox > h2 {
+.box {
+  margin: 1vmax;
+}
+
+.boxHeader {
   text-decoration: none;
-  font: 500 2vmax "Roboto";
+  font: 500 33px "Roboto";
   color: black;
   padding: 1vmax;
+  text-align: center;
 }
 
-.mailBtn {
+.emailBox,
+.followBox,
+.addressBox {
+  text-align: center;
+}
+
+.addressBox {
+  font-size: 30px;
+}
+.emailBox > .mailBtn {
   text-decoration: none;
 }
 
-.mailBtn > button {
+.emailBox > .mailBtn > button {
   text-decoration: none;
-  font: 600 3vmax "Roboto";
+  font: 600 30px "Roboto";
+  color: black;
+  padding: 10px;
   cursor: pointer;
-  padding: 2vmax;
-  border: 5px solid white;
-  color: white;
-  transform: translateX(-100vw);
-  animation: mailBtnAnimation 2s forwards;
-  border-radius: 5px;
+  background: navajowhite;
 }
 
-.mailBtn :hover {
-  color: whitesmoke;
+.emailBox > .mailBtn > button :hover {
+  color: rgb(53, 50, 50);
   transform: scale(0.8);
 }
 
-.followBox {
-  border-left: 3px solid rgb(41, 39, 39);
-}
-
-.followBox > h2 {
-  color: rgb(20, 18, 18);
-  font: 100 2vmax "Roboto";
-  margin: 2vmax;
-}
-
 .followBox > a > svg {
-  font-size: 4vmax;
+  font-size: 45px;
   margin: 1vmax 4vmax 1vmax 2vmax;
-  transform: translateX(-100vw);
-  animation: mailBtnAnimation 2s forwards;
 }
 
 .followBox > a :hover {
   color: whitesmoke;
-  transform: scale(0.8);
 }
 
-.youtubeSvgIcon {
+.instagramSvgIcon {
   color: rgb(241, 36, 0);
 }
 
@@ -76,16 +74,15 @@
 .twitterSvgIcon {
   color: #009cda;
 }
-@keyframes mailBtnAnimation {
-  to {
-    transform: translateX(0);
-  }
-}
 
 @media screen and (max-width: 600px) {
   .contactContainer {
     margin: 0 2vmax;
     margin-top: 100px;
     border-radius: 5px;
+  }
+
+  .emailBox > .mailBtn > button {
+    font: 500 3vmax "Roboto";
   }
 }
