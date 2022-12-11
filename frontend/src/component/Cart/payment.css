@@ -84,6 +84,17 @@
   background: gray;
 }
 
+.noteStripe {
+  margin: -1.5vmax auto 10px auto;
+  text-align: center;
+}
+.noteStripe h4 {
+  color: grey;
+}
+.noteStripe h4 b {
+  color: red;
+}
+
 @media screen and (max-width: 600px) {
   .paymentBox {
     width: 90%;

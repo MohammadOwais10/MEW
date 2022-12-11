@@ -1,6 +1,6 @@
 const Wishlist = require("../models/wishlistModel");
 const catchAsyncErrors = require("../middleware/catchAsyncError");
-const ErrorHandler = require("../utils/ErrorHandler");
+const ErrorHandler = require("../utils/errorhandler");
 
 // Add to wishlist
 exports.createwishlist = catchAsyncErrors(async (req, res, next) => {

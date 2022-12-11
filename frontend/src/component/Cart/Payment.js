@@ -145,6 +145,13 @@ const Payment = () => {
               className="paymentFormBtn"
             />
           </form>
+
+          <div className="noteStripe">
+            <h4>
+              <b>Note: </b>
+              Use Stripe Card: 4242 4242 4242 4242
+            </h4>
+          </div>
         </div>
       </div>
     </Fragment>
