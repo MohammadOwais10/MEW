@@ -1,6 +1,6 @@
 # MEW 
 Men's Ethnic Wear is an ecommerce web application
-### 🚀visit : https://e-mew.herokuapp.com
+### 🚀visit : https://mew.onrender.com
 ## Tools and Packages
  ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)&nbsp;
 ![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)&nbsp;
@@ -15,6 +15,7 @@ Men's Ethnic Wear is an ecommerce web application
 <img src="https://velog.velcdn.com/images%2Fjch9537%2Fpost%2F7f031d06-1270-43ed-a097-f177caef37ba%2Fimage.png" height="28px" width="90px" alt="Node Mailer">
 ![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)&nbsp;
 ![heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)&nbsp;
+![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 
 ## Features
 - Login/Signup User Account
@@ -66,7 +67,7 @@ Start the client
 ```
 
 ## Environment configurations
-set your config.env file : it's only format
+set your config.env file : use given format
 ```
 PORT=4000
 DB_URI='mongodb_uri'
@@ -86,14 +87,31 @@ STRIPE_SECRET_KEY='stripe secret'
 ```
 ## UI Screenshot
 - Home UI
-![mewHome](https://user-images.githubusercontent.com/91982138/173220729-30fc04a1-6f7e-4cec-9186-75405b5e1593.PNG)
+![mew-home-ui](https://user-images.githubusercontent.com/91982138/207134798-4220edcb-9861-445d-9598-88d9cd6d4ce1.PNG)
+
 - Products UI
-![mewProducts](https://user-images.githubusercontent.com/91982138/173220730-60902535-2155-4ac3-a67c-60e23c74b411.PNG)
+![mew-product-ui](https://user-images.githubusercontent.com/91982138/207134901-29e94576-54ea-4465-8649-096bcc8e28c4.PNG)
+
 - Pagination and Filter Box UI 
-![mewCatPag](https://user-images.githubusercontent.com/91982138/173220738-77d748a0-fb60-4dc5-813a-c94afd9f36ad.PNG)
+![mew-filter-ui](https://user-images.githubusercontent.com/91982138/207134998-fb74c77e-d7e2-4d10-9f08-ff22cb3d750e.PNG)
+
+- Cart UI
+![mew-cart-ui](https://user-images.githubusercontent.com/91982138/207135222-c1e0832b-2ae9-4256-8491-cf2a37176fd5.PNG)
+
+- Shipping UI
+![mew-shipping-ui](https://user-images.githubusercontent.com/91982138/207136309-22b09817-561e-417c-8dad-8152b5979400.PNG)
+
+- Payment UI
+![mew-payment-ui](https://user-images.githubusercontent.com/91982138/207135291-e325a4a5-aaa2-4030-8a0d-1fa42a598771.PNG)
+
 - Admin Dashboard UI 
-![mewDashboard](https://user-images.githubusercontent.com/91982138/173220739-c68f397f-56ab-4c2f-b1c0-0e33b91c04a4.PNG)
-- Admin Manage Order UI 
-![mewAllOrders](https://user-images.githubusercontent.com/91982138/173220745-8c3631d1-5190-47fa-a891-82d16cc2763f.PNG)
-- Admin Charts Dynamic Value UI 
-![mewChart](https://user-images.githubusercontent.com/91982138/173220743-4082caf9-0601-49db-b011-61a0987bc400.PNG)
+![mew-dashboard-ui](https://user-images.githubusercontent.com/91982138/207135039-3e559185-01c0-450c-b3ec-631bdc36d72b.PNG)
+
+- Admin All Order UI 
+![mew-allorder-ui](https://user-images.githubusercontent.com/91982138/207136443-08c92fa6-1212-4693-b356-a7d5ef6390ab.PNG)
+
+- Admin Update Product UI 
+![mew-update-ui](https://user-images.githubusercontent.com/91982138/207136497-075a5d19-b9e4-41aa-9001-c4c9b1d5427d.PNG)
+
+- Admin Process Order UI 
+![mew-order-process-ui](https://user-images.githubusercontent.com/91982138/207136613-a651fa4f-f77f-48c3-bcd1-187162398782.PNG)
